@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="luo'blog"><meta name="keywords" content="python web 学习笔记"><title>Python 技巧总结 | luosilent</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Python 技巧总结</h1><a id="logo" href="/.">luosilent</a><p class="description">黑白</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">Python 技巧总结</h1><div class="post-meta"><a href="/2017/08/17/Python-技巧总结/#comments" class="comment-count"><a id="uyan_count_unit" href="/2017/08/17/Python-技巧总结/"></a>留言</a><p><span class="date">Aug 17, 2017</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><p>转载原文by litaotao <a href="https://litaotao.github.io/python-materials" target="_blank" rel="external">https://litaotao.github.io/python-materials</a></p>
+<p>1.枚举 - enumerate 可以有参数哦</p>
+<p>之前我们这样操作：</p>
+<pre><code>i = 0
+for item in iterable:
+    print i, item
+    i += 1
+</code></pre><p>现在我们这样操作：</p>
+<pre><code>for i, item in enumerate(iterable):
+    print i, item
+</code></pre><p>enumerate函数还可以接收第二个参数。就像下面这样：</p>
+<pre><code>&gt;&gt;&gt;list(enumerate(&apos;abc&apos;)) 
+
+[(0, &apos;a&apos;), (1, &apos;b&apos;), (2, &apos;c&apos;)] 
+
+&gt;&gt;&gt; list(enumerate(&apos;abc&apos;, 1)) 
+[(1, &apos;a&apos;), (2, &apos;b&apos;), (3, &apos;c&apos;)]
+</code></pre><p>2.字典/集合 解析</p>
+<p>你也许知道如何进行列表解析，但是可能不知道字典/集合解析。它们简单易用且高效。就像下面这个例子：</p>
+<pre><code>my_dict = {i: i * i for i in xrange(100)} 
+my_set = {i * 15 for i in xrange(100)}
+
+# There is only a difference of &apos;:&apos; in both
+
+# 两者的区别在于字典推导中有冒号
+</code></pre><p>3.强制浮点除法</p>
+<pre><code>from __future__ import division 
+result = 1/2
+# print(result)
+# 0.5
+</code></pre><p>4.对Python表达式求值</p>
+<p>我们都知道eval函数，但是我们知道literal_eval函数么？也许很多人都不知道吧。可以用这种操作：</p>
+<pre><code>import ast 
+my_list = ast.literal_eval(expr)  
+</code></pre><p>来代替以下这种操作：</p>
+<pre><code>expr = &quot;[1, 2, 3]&quot;
+my_list = eval(expr)
+</code></pre><p>我相信对于大多数人来说这种形式是第一次看见，但是实际上这个在Python中已经存在很长时间了。</p>
+<p>5.字符串/数列 逆序</p>
+<p>你可以用以下方法快速逆序排列数列：</p>
+<pre><code>&gt;&gt;&gt; a = [1,2,3,4]
+&gt;&gt;&gt; a[::-1]
+[4, 3, 2, 1]
+
+# This creates a new reversed list. 
+# If you want to reverse a list in place you can do:
+
+a.reverse()
+</code></pre><p>这总方式也同样适用于字符串的逆序：</p>
+<pre><code>&gt;&gt;&gt; foo = &quot;yasoob&quot;
+&gt;&gt;&gt; foo[::-1]
+&apos;boosay&apos;
+</code></pre><p>6.三元运算</p>
+<p>三元运算是if-else 语句的快捷操作，也被称为条件运算。这里有几个例子可以供你参考，它们可以让你的代码更加紧凑，更加美观。</p>
+<pre><code>[on_true] if [expression] else [on_false]
+x, y = 50, 25
+small = x if x &lt; y else y
+</code></pre><p>7.Python里面如何拷贝一个对象</p>
+<p>标准库中的copy模块提供了两个方法来实现拷贝.一个方法是copy,它返回和参数包含内容一样的对象.</p>
+<pre><code>import copy
+new_list = copy.copy(existing_list)
+</code></pre><p>有些时候,你希望对象中的属性也被复制,可以使用deepcopy方法:</p>
+<pre><code>import copy
+new_list_of_dicts = copy.deepcopy(existing_list_of_dicts)
+copy(x)
+Shallow copy operation on arbitrary Python objects.
+
+deepcopy(x, memo=None, _nil=[])
+Deep copy operation on arbitrary Python objects.
+</code></pre><p>8.python中如何判断对象相等</p>
+<pre><code>首先是C#中字符串的==和equal方法。
+“==” :
+对于内置值类型而言， == 判断两个内存值是否相等。
+对于用户自定义的值类型而言(Struct)， == 需要重载，否则不能使用。
+对于引用类型而言，默认是同一引用才返回true，但是系统重载了很多引用类型的 == （比如下文提到的string），所以c#中引用类型的比较并不建议使用 ==。
+“equals” :
+对于值类型而言， 内存相等才返回true。
+对于引用类型而言，指向同一个引用才算相等。
+但是比较特殊的是字符串String,是一个特殊的引用型类型，在C#语言中，重载了string的equals()方法，使string对象用起来就像是值类型一样。
+python中的 ==
+python中的对象包含三要素:id, type, value
+id 用来标识唯一一个对象，type标识对象的类型，value用来设置对象的值。
+is 判断是否是一个对象，使用id来判断的。
+== 是判断a对象的值是否是b对象的值，默认调用它的__eq__方法。
+</code></pre><p>9.命名技巧</p>
+<p>今天阅读代码，发现一个不错的函数命名方式:</p>
+<pre><code>def request(_argv):  
+</code></pre><p>就是把所有的参数前面都加上_下划线，这样你在函数体中，一眼就可以看出那些是局部变量，那些是作为参数传入的，类似把全局变量前面加上g。</p>
+<p>10.开发者工具集锦</p>
+<ul>
+<li>pydoc： 模块可以根据源代码中的docstrings为任何可导入模块生成格式良好的文档。</li>
+<li>doctest模块：该模块可以从源代码或独立文件的例子中抽取出测试用例。</li>
+<li>unittest模块：该模块是一个全功能的自动化测试框架，该框架提供了对测试准备(test fixtures), 预定义测试集(predefined test suite)以及测试发现(test discovery)的支持。</li>
+<li>trace：模块可以监控Python执行程序的方式，同时生成一个报表来显示程序的每一行执行的次数。这些信息可以用来发现未被自动化测试集所覆盖的程序执行路径，也可以用来研究程序调用图，进而发现模块之间的依赖关系。编写并执行测试可以发现绝大多数程序中的问题，Python使得debug工作变得更加简单，这是因为在大部分情况下，Python都能够将未被处理的错误打印到控制台中，我们称这些错误信息为traceback。如果程序不是在文本控制台中运行的，traceback也能够将错误信息输出到日志文件或是消息对话框中。当标准的traceback无法提供足够的信息时，可以使用cgitb 模块来查看各级栈和源代码上下文中的详细信息，比如局部变量。cgitb模块还能够将这些跟踪信息以HTML的形式输出，用来报告web应用中的错误。</li>
+<li>pdb：该模块可以显示出程序在错误产生时的执行路径，同时可以动态地调整对象和代码进行调试。<br>profile, timeit: 开发者可以使用profile以及timit模块来测试程序的速度，找出程序中到底是哪里很慢，进而对这部分代码独立出来进行调优的工作。</li>
+<li>compileall: Python程序是通过解释器执行的，解释器的输入是原有程序的字节码编译版本。这个字节码编译版本可以在程序执行时动态地生成，也可以在程序打包的时候就生成。compileall模块可以处理程序打包的事宜，它暴露出了打包相关的接口，该接口能够被安装程序和打包工具用来生成包含模块字节码的文件。同时，在开发环境中，compileall模块也可以用来验证源文件是否包含了语法错误。<br>YAPF：Google开源的Python代码格式化工具。</li>
+<li>iPDB: iPDB是一个极好的工具，我已经用它查出了很多匪夷所思的bug。pip install ipdb 安装该工具，然后在你的代码中import ipdb; ipdb.set_trace()，然后你会在你的程序运行时，获得一个很好的交互式提示。它每次执行程序的一行并且检查变量。</li>
+<li>pycallgraph: 在一些场合，我使用pycallgraph来追踪性能问题。它可以创建函数调用时间和次数的图表。</li>
+<li>objgraph: objgraph对于查找内存泄露非常有用。</li>
+</ul>
+<pre><code>![图标][id]
+[id]: https://litaotao.github.io/images/pycallgraph.jpg   &quot;这是图标&quot;
+</code></pre></div><div class="tags"><a href="/tags/python笔记/">python笔记</a></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/2017/08/16/first/" class="next">first</a></div><div id="comments"><div id="uyan_frame"></div></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/17/Python-技巧总结/">Python 技巧总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/16/first/">first</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/python-test/" style="font-size: 15px;">python test</a> <a href="/tags/python笔记/" style="font-size: 15px;">python笔记</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 友情链接</i></div><ul></ul><a href="http://www.baidu.com/" title="百度" target="_blank">百度</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">luosilent.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?11080905";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script><script src="http://v2.uyan.cc/code/uyan.js?uid=2141801"></script></body></html>
