@@ -1,8 +1,1163 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="luo'blog"><meta name="keywords" content="python web 学习笔记"><title>luosilent | 黑白</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">luosilent</h1><a id="logo" href="/.">luosilent</a><p class="description">黑白</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h2 class="post-title"><a href="/2017/08/18/爬虫的理论知识储备/">爬虫的理论知识储备</a></h2><div class="post-meta"><p><span class="date">2017-08-18</span></p></div><div class="post-content"><p>网络爬虫，是一种按照一定的规则，自动地抓取万维网信息的程序或脚本。</p></div><p class="readmore"><a href="/2017/08/18/爬虫的理论知识储备/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2017/08/17/每天读点文学/">每天读点文学2</a></h2><div class="post-meta"><p><span class="date">2017-08-17</span></p></div><div class="post-content"><p><strong>文摘</strong></p></div><p class="readmore"><a href="/2017/08/17/每天读点文学/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2017/08/17/Python-技巧总结/">Python 技巧总结</a></h2><div class="post-meta"><p><span class="date">2017-08-17</span></p></div><div class="post-content"><p>1.枚举 - enumerate 可以有参数哦</p></div><p class="readmore"><a href="/2017/08/17/Python-技巧总结/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2017/08/16/first/">每天读点文学1</a></h2><div class="post-meta"><p><span class="date">2017-08-16</span></p></div><div class="post-content"><p><strong>文摘</strong></p></div><p class="readmore"><a href="/2017/08/16/first/">阅读更多</a></p></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/18/爬虫的理论知识储备/">爬虫的理论知识储备</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/17/每天读点文学/">每天读点文学2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/17/Python-技巧总结/">Python 技巧总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/16/first/">每天读点文学1</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/python笔记/" style="font-size: 15px;">python笔记</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/文摘/" style="font-size: 15px;">文摘</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/爬虫/" style="font-size: 15px;">爬虫</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 友情链接</i></div><ul></ul><a href="http://www.baidu.com/" title="百度" target="_blank">百度</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">luosilent.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?11080905";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-  })();
-</script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/totop.js?v=2.0.1" async></script></body></html>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="luo&apos;blog">
+<meta name="keywords" content="python web 学习笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="luosilent">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="luosilent">
+<meta property="og:description" content="luo&apos;blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="luosilent">
+<meta name="twitter:description" content="luo&apos;blog">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>luosilent</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">luosilent</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">黑白</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/爬虫的理论知识储备/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="luosilent">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="luosilent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/18/爬虫的理论知识储备/" itemprop="url">爬虫的理论知识储备</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-18T23:23:09+08:00">
+                2017-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>网络爬虫，是一种按照一定的规则，自动地抓取万维网信息的程序或脚本。</p>
+<p>爬虫通过网页的链接地址来寻找网页并获取网页内容，再根据网页中其他链接不断循环爬取。</p>
+<p>1.浏览网页的过程</p>
+<ul>
+<li><p>浏览网页的过程其实就是浏览器作为一个浏览的“客户端”，向服务器端发送了 一次请求，把服务器端的文件“抓”到本地，再进行解释、展现。</p>
+</li>
+<li><p>使用统一资源定位符URL来标志万维网上的各种文档，并使每一个文档在整个因特网的范围内具有唯一的标识符URL。<br>通过超文本传送协议HTTP来实现万维网上各种连接，使用TCP连接进行可靠的传送。<br>使用超文本标记语言HTML使得网页设计者可以很方便地用链接从本页面的某处链接到任意网页，并在自己主机屏幕上显示。</p>
+</li>
+</ul>
+<p>2.统一资源定位符URL</p>
+<p>URL是用来表示从因特网上得到的资源位置和访问这些资源的方法。URL给资源的位置提供一种抽象的识别方法，并用这种方法给资源定位。只要能够对资源定位，系统就可以对资源进行各种操作，如存取、更新、替换和查找其属性。URL相当于一个文件名在网络范围的扩展。因此，URL是与因特网相连的机器上的任何可访问对象的指针。由于访问不同对象使用的协议不同，URL还能之处读取某个对象时所使用的协议。URL的一般形式为：</p>
+<pre><code>&lt;协议&gt;://&lt;主机&gt;:&lt;端口&gt;/&lt;路径&gt;
+</code></pre><p>协议是指用哪种协议获取该万维网文档，如http，ftp；主机是指该网络文档所在主机的域名；端口和路径有时可以省略。对万维网的网点访问使用HTTP协议，HTTP的默认端口号是80，通常可省略。若在省略文件的路径，则URL就指到因特网上的某个主页。如： www.baidu.com。</p>
+<p>3.超文本传送协议HTTP</p>
+<p>HTTP协议定义了浏览器怎样向万维网服务器请求万维网文档，以及服务器怎样把文档传送给浏览器。下图给出了万维网的大致工作过程。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/53611-c9e7f5c52aab4a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Alt text"></p>
+<p>HTTP规定在HTTP客户与HTTP服务器之间的每次交互，都由一个ASCII码穿构成的请求和一个“MIME-like”的响应组成，HTTP报文通常都使用TCP连接传送。</p>
+<p>HTTP有两类报文：请求报文（从客户向服务器发送请求报文）和响应报文（从服务器到客户的回答）。HTTP请求报文和响应报文都是由三部分组成，两种报文格式的区别就是开始行不同。</p>
+<ol>
+<li><p><strong>开始行</strong> 用于区分是请求报文还是响应报文。开始行在两种报文中分别叫请求行和状态行。</p>
+</li>
+<li><p><strong>首部行</strong> 用来说明浏览器或报文主题的一些信息。</p>
+</li>
+<li><p><strong>实体主体</strong> 在请求报文中一般不用该字段，而在响应报文中也可能没有该字段。</p>
+</li>
+</ol>
+<p>请求行只有三个内容，即<strong>方法、请求资源URL和HTTP的版本</strong>。下表给出了请求报文中常用的几种方法。</p>
+<table><br>        <tr><br>            <th>方法</th><br>            <th>意义</th><br>        </tr><br>        <tr><br>            <th>GET</th><br>            <th>请求读取URL标志的信息</th><br>        </tr><br>        <tr><br>            <th>OPTION</th><br>            <th>请求一些选项的信息</th><br>        </tr><br>        <tr><br>            <th>HEAD</th><br>            <th>请求读取URL标志信息的首部</th><br>        </tr><br>        <tr><br>            <th>POST</th><br>            <th>给服务器添加信息，如注释</th><br>        </tr><br>        <tr><br>            <th>PUT</th><br>            <th>在致命的URL下存储一个文档</th><br>        </tr><br>        <tr><br>            <th>DELETE</th><br>            <th>删除致命的URL所标志的资源</th><br>        </tr><br>        <tr><br>            <th>CONNECT</th><br>            <th>用于代理服务器</th><br>        </tr><br></table>
+
+
+<pre><code>GET http://www.bilibili.com/video/douga.html  HTTP/1.1
+</code></pre><p>下面是一个请求报文的例子</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/53611-ec8d7daf1793749a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Alt text"></p>
+<p>4。超文本标记语言HTML</p>
+<p>HTML指的是超文本标记语言，是使用标记标签来描述网页的。</p>
+<p>HTML标签是由尖括号包围的关键词，比如&lt;html&gt;。HTML标签通常是成对出现的，标签对中的第一个标签是开始标签，第二个是结束标签，比如&lt;b&gt;和&lt;/b&gt;。</p>
+<p>HTML文档包含HTML标签和纯文本，也称为网页。Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容。</p>
+<p>五个基本的标签</p>
+<ul>
+<li>&lt;h1&gt; - &lt;h6&gt;等：定义HTML 标题。</li>
+<li>&lt;p&gt;：定义HTML 段落。</li>
+<li>&lt;a&gt;：定义HTML 链接。</li>
+<li>&lt;img&gt;：定义HTML 图像。</li>
+<li>&lt;div&gt; :HTML分组标签，定义文档中的分区或节。</li>
+</ul>
+<pre><code>&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;h2&gt;This is a heading&lt;/h2&gt;
+&lt;h3&gt;This is a heading&lt;/h3&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;This is a link&lt;/a&gt;
+
+&lt;img src=&quot;w3school.jpg&quot; width=&quot;104&quot; height=&quot;142&quot; /&gt;
+</code></pre><p>HTML 元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码。元素的内容是开始标签与结束标签之间的内容。大多数 HTML 元素可以嵌套（可以包含其他 HTML 元素），HTML 文档由嵌套的 HTML 元素构成。如下例包含3个HTML元素。</p>
+<pre><code>&lt;html&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>HTML 属性：HTML 标签可以拥有属性，属性提供了有关 HTML 元素的更多的信息，属性总是以名称/值对的形式出现，比如：name=”value”，属性总是在 HTML 元素的开始标签中规定；属性值应该始终被包括在引号内，双引号是最常用的，不过使用单引号也没有问题。</p>
+<p>HTML链接由&lt;a&gt;标签定义，链接的地址在 href 属性中指定：</p>
+<pre><code>&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;This is a link&lt;a&gt;
+</code></pre><p>转载于作者：Mr希灵</p>
+<p>链接：<a href="http://www.jianshu.com/p/0cec67708277" target="_blank" rel="external">http://www.jianshu.com/p/0cec67708277</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/17/每天读点文学/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="luosilent">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="luosilent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/17/每天读点文学/" itemprop="url">每天读点文学2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-17T20:12:14+08:00">
+                2017-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>文摘</strong></p>
+<p>我喜欢回顾，是因为我不喜欢忘记。我总认为，在世间，有些人、有些事、有些时刻似乎都有一种特定的安排，在当时也许不觉得，但是在以后回想起来，却都有一种深意。我有过许多美丽的时刻，实在舍不得将它们忘记。<br> ——席慕容《透明的哀伤》</p>
+<p><img src="http://wx4.sinaimg.cn/small/0069ddnsgy1fioctoebdzj30j60y343x.jpg" alt="test"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/17/Python-技巧总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="luosilent">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="luosilent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/17/Python-技巧总结/" itemprop="url">Python 技巧总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-17T14:43:01+08:00">
+                2017-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.枚举 - enumerate 可以有参数哦</p>
+<p>之前我们这样操作：</p>
+<pre><code>i = 0
+for item in iterable:
+    print i, item
+    i += 1
+</code></pre><p>现在我们这样操作：</p>
+<pre><code>for i, item in enumerate(iterable):
+    print i, item
+</code></pre><p>enumerate函数还可以接收第二个参数。就像下面这样：</p>
+<pre><code>&gt;&gt;&gt;list(enumerate(&apos;abc&apos;)) 
+
+[(0, &apos;a&apos;), (1, &apos;b&apos;), (2, &apos;c&apos;)] 
+
+&gt;&gt;&gt; list(enumerate(&apos;abc&apos;, 1)) 
+[(1, &apos;a&apos;), (2, &apos;b&apos;), (3, &apos;c&apos;)]
+</code></pre><p>2.字典/集合 解析</p>
+<p>你也许知道如何进行列表解析，但是可能不知道字典/集合解析。它们简单易用且高效。就像下面这个例子：</p>
+<pre><code>my_dict = {i: i * i for i in xrange(100)} 
+my_set = {i * 15 for i in xrange(100)}
+
+# There is only a difference of &apos;:&apos; in both
+
+# 两者的区别在于字典推导中有冒号
+</code></pre><p>3.强制浮点除法</p>
+<pre><code>from __future__ import division 
+result = 1/2
+# print(result)
+# 0.5
+</code></pre><p>4.对Python表达式求值</p>
+<p>我们都知道eval函数，但是我们知道literal_eval函数么？也许很多人都不知道吧。可以用这种操作：</p>
+<pre><code>import ast 
+my_list = ast.literal_eval(expr)  
+</code></pre><p>来代替以下这种操作：</p>
+<pre><code>expr = &quot;[1, 2, 3]&quot;
+my_list = eval(expr)
+</code></pre><p>我相信对于大多数人来说这种形式是第一次看见，但是实际上这个在Python中已经存在很长时间了。</p>
+<p>5.字符串/数列 逆序</p>
+<p>你可以用以下方法快速逆序排列数列：</p>
+<pre><code>&gt;&gt;&gt; a = [1,2,3,4]
+&gt;&gt;&gt; a[::-1]
+[4, 3, 2, 1]
+
+# This creates a new reversed list. 
+# If you want to reverse a list in place you can do:
+
+a.reverse()
+</code></pre><p>这总方式也同样适用于字符串的逆序：</p>
+<pre><code>&gt;&gt;&gt; foo = &quot;yasoob&quot;
+&gt;&gt;&gt; foo[::-1]
+&apos;boosay&apos;
+</code></pre><p>6.三元运算</p>
+<p>三元运算是if-else 语句的快捷操作，也被称为条件运算。这里有几个例子可以供你参考，它们可以让你的代码更加紧凑，更加美观。</p>
+<pre><code>[on_true] if [expression] else [on_false]
+x, y = 50, 25
+small = x if x &lt; y else y
+</code></pre><p>7.Python里面如何拷贝一个对象</p>
+<p>标准库中的copy模块提供了两个方法来实现拷贝.一个方法是copy,它返回和参数包含内容一样的对象.</p>
+<pre><code>import copy
+new_list = copy.copy(existing_list)
+</code></pre><p>有些时候,你希望对象中的属性也被复制,可以使用deepcopy方法:</p>
+<pre><code>import copy
+new_list_of_dicts = copy.deepcopy(existing_list_of_dicts)
+copy(x)
+Shallow copy operation on arbitrary Python objects.
+
+deepcopy(x, memo=None, _nil=[])
+Deep copy operation on arbitrary Python objects.
+</code></pre><p>8.python中如何判断对象相等</p>
+<pre><code>首先是C#中字符串的==和equal方法。
+“==” :
+对于内置值类型而言， == 判断两个内存值是否相等。
+对于用户自定义的值类型而言(Struct)， == 需要重载，否则不能使用。
+对于引用类型而言，默认是同一引用才返回true，但是系统重载了很多引用类型的 == （比如下文提到的string），所以c#中引用类型的比较并不建议使用 ==。
+“equals” :
+对于值类型而言， 内存相等才返回true。
+对于引用类型而言，指向同一个引用才算相等。
+但是比较特殊的是字符串String,是一个特殊的引用型类型，在C#语言中，重载了string的equals()方法，使string对象用起来就像是值类型一样。
+python中的 ==
+python中的对象包含三要素:id, type, value
+id 用来标识唯一一个对象，type标识对象的类型，value用来设置对象的值。
+is 判断是否是一个对象，使用id来判断的。
+== 是判断a对象的值是否是b对象的值，默认调用它的__eq__方法。
+</code></pre><p>9.命名技巧</p>
+<p>今天阅读代码，发现一个不错的函数命名方式:</p>
+<pre><code>def request(_argv):  
+</code></pre><p>就是把所有的参数前面都加上_下划线，这样你在函数体中，一眼就可以看出那些是局部变量，那些是作为参数传入的，类似把全局变量前面加上g。</p>
+<p>10.开发者工具集锦</p>
+<ul>
+<li>pydoc： 模块可以根据源代码中的docstrings为任何可导入模块生成格式良好的文档。</li>
+<li>doctest模块：该模块可以从源代码或独立文件的例子中抽取出测试用例。</li>
+<li>unittest模块：该模块是一个全功能的自动化测试框架，该框架提供了对测试准备(test fixtures), 预定义测试集(predefined test suite)以及测试发现(test discovery)的支持。</li>
+<li>trace：模块可以监控Python执行程序的方式，同时生成一个报表来显示程序的每一行执行的次数。这些信息可以用来发现未被自动化测试集所覆盖的程序执行路径，也可以用来研究程序调用图，进而发现模块之间的依赖关系。编写并执行测试可以发现绝大多数程序中的问题，Python使得debug工作变得更加简单，这是因为在大部分情况下，Python都能够将未被处理的错误打印到控制台中，我们称这些错误信息为traceback。如果程序不是在文本控制台中运行的，traceback也能够将错误信息输出到日志文件或是消息对话框中。当标准的traceback无法提供足够的信息时，可以使用cgitb 模块来查看各级栈和源代码上下文中的详细信息，比如局部变量。cgitb模块还能够将这些跟踪信息以HTML的形式输出，用来报告web应用中的错误。</li>
+<li>pdb：该模块可以显示出程序在错误产生时的执行路径，同时可以动态地调整对象和代码进行调试。<br>profile, timeit: 开发者可以使用profile以及timit模块来测试程序的速度，找出程序中到底是哪里很慢，进而对这部分代码独立出来进行调优的工作。</li>
+<li>compileall: Python程序是通过解释器执行的，解释器的输入是原有程序的字节码编译版本。这个字节码编译版本可以在程序执行时动态地生成，也可以在程序打包的时候就生成。compileall模块可以处理程序打包的事宜，它暴露出了打包相关的接口，该接口能够被安装程序和打包工具用来生成包含模块字节码的文件。同时，在开发环境中，compileall模块也可以用来验证源文件是否包含了语法错误。<br>YAPF：Google开源的Python代码格式化工具。</li>
+<li>iPDB: iPDB是一个极好的工具，我已经用它查出了很多匪夷所思的bug。pip install ipdb 安装该工具，然后在你的代码中import ipdb; ipdb.set_trace()，然后你会在你的程序运行时，获得一个很好的交互式提示。它每次执行程序的一行并且检查变量。</li>
+<li>pycallgraph: 在一些场合，我使用pycallgraph来追踪性能问题。它可以创建函数调用时间和次数的图表。</li>
+<li>objgraph: objgraph对于查找内存泄露非常有用。</li>
+</ul>
+<p>  <img src="https://litaotao.github.io/images/pycallgraph.jpg" alt="图标"></p>
+<p>转载原文by litaotao <a href="https://litaotao.github.io/python-materials" target="_blank" rel="external">https://litaotao.github.io/python-materials</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/first/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="luosilent">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="luosilent">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/16/first/" itemprop="url">每天读点文学1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-16T23:12:14+08:00">
+                2017-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>文摘</strong></p>
+<p>不要着急，最好的总会在最不经意的时候出现。那我们要做的就是：怀揣希望去努力，静待美好的出现。————泰戈尔 ​​​​</p>
+<p><img src="http://wx3.sinaimg.cn/mw690/0069ddnsgy1fiod974sc3j30c80c8gn1.jpg" alt="test"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="luosilent" />
+          <p class="site-author-name" itemprop="name">luosilent</p>
+           
+              <p class="site-description motion-element" itemprop="description">luo'blog</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">luosilent</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+    Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  </div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">
+    Theme &mdash;
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+      NexT.Muse
+    </a>
+  </div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
