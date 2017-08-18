@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="luo'blog"><meta name="keywords" content="python web 学习笔记"><title>爬虫的理论知识储备 | luosilent</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">爬虫的理论知识储备</h1><a id="logo" href="/.">luosilent</a><p class="description">黑白</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">爬虫的理论知识储备</h1><div class="post-meta"><a href="/2017/08/18/爬虫的理论知识储备/#comments" class="comment-count"><a id="uyan_count_unit" href="/2017/08/18/爬虫的理论知识储备/"></a>留言</a><p><span class="date">Aug 18, 2017</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><p>网络爬虫，是一种按照一定的规则，自动地抓取万维网信息的程序或脚本。</p>
+<p>爬虫通过网页的链接地址来寻找网页并获取网页内容，再根据网页中其他链接不断循环爬取。</p>
+<p>1.浏览网页的过程</p>
+<ul>
+<li><p>浏览网页的过程其实就是浏览器作为一个浏览的“客户端”，向服务器端发送了 一次请求，把服务器端的文件“抓”到本地，再进行解释、展现。</p>
+</li>
+<li><p>使用统一资源定位符URL来标志万维网上的各种文档，并使每一个文档在整个因特网的范围内具有唯一的标识符URL。<br>通过超文本传送协议HTTP来实现万维网上各种连接，使用TCP连接进行可靠的传送。<br>使用超文本标记语言HTML使得网页设计者可以很方便地用链接从本页面的某处链接到任意网页，并在自己主机屏幕上显示。</p>
+</li>
+</ul>
+<p>2.统一资源定位符URL</p>
+<p>URL是用来表示从因特网上得到的资源位置和访问这些资源的方法。URL给资源的位置提供一种抽象的识别方法，并用这种方法给资源定位。只要能够对资源定位，系统就可以对资源进行各种操作，如存取、更新、替换和查找其属性。URL相当于一个文件名在网络范围的扩展。因此，URL是与因特网相连的机器上的任何可访问对象的指针。由于访问不同对象使用的协议不同，URL还能之处读取某个对象时所使用的协议。URL的一般形式为：</p>
+<pre><code>&lt;协议&gt;://&lt;主机&gt;:&lt;端口&gt;/&lt;路径&gt;
+</code></pre><p>协议是指用哪种协议获取该万维网文档，如http，ftp；主机是指该网络文档所在主机的域名；端口和路径有时可以省略。对万维网的网点访问使用HTTP协议，HTTP的默认端口号是80，通常可省略。若在省略文件的路径，则URL就指到因特网上的某个主页。如： www.baidu.com。</p>
+<p>3.超文本传送协议HTTP</p>
+<p>HTTP协议定义了浏览器怎样向万维网服务器请求万维网文档，以及服务器怎样把文档传送给浏览器。下图给出了万维网的大致工作过程。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/53611-c9e7f5c52aab4a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Alt text"></p>
+<p>HTTP规定在HTTP客户与HTTP服务器之间的每次交互，都由一个ASCII码穿构成的请求和一个“MIME-like”的响应组成，HTTP报文通常都使用TCP连接传送。</p>
+<p>HTTP有两类报文：请求报文（从客户向服务器发送请求报文）和响应报文（从服务器到客户的回答）。HTTP请求报文和响应报文都是由三部分组成，两种报文格式的区别就是开始行不同。</p>
+<ol>
+<li><p><strong>开始行</strong> 用于区分是请求报文还是响应报文。开始行在两种报文中分别叫请求行和状态行。</p>
+</li>
+<li><p><strong>首部行</strong> 用来说明浏览器或报文主题的一些信息。</p>
+</li>
+<li><p><strong>实体主体</strong> 在请求报文中一般不用该字段，而在响应报文中也可能没有该字段。</p>
+</li>
+</ol>
+<p>请求行只有三个内容，即<strong>方法、请求资源URL和HTTP的版本</strong>。下表给出了请求报文中常用的几种方法。</p>
+<table><br>        <tr><br>            <th>方法</th><br>            <th>意义</th><br>        </tr><br>        <tr><br>            <th>GET</th><br>            <th>请求读取URL标志的信息</th><br><br><br>        </tr><br>        <tr><br>            <th>OPTION</th><br>            <th>请求一些选项的信息</th><br><br>        </tr><br>        <tr><br>            <th>HEAD</th><br>            <th>请求读取URL标志信息的首部</th><br><br>        </tr><br>        <tr><br>            <th>POST</th><br>            <th>给服务器添加信息，如注释</th><br><br>        </tr><br>        <tr><br>            <th>PUT</th><br>            <th>在致命的URL下存储一个文档</th><br><br>        </tr><br>        <tr><br>            <th>DELETE</th><br>            <th>删除致命的URL所标志的资源</th><br><br>        </tr><br>        <tr><br>            <th>CONNECT</th><br>            <th>用于代理服务器</th><br><br>        </tr><br></table>
+
+
+<pre><code>GET http://www.bilibili.com/video/douga.html  HTTP/1.1
+</code></pre><p>下面是一个请求报文的例子</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/53611-ec8d7daf1793749a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Alt text"></p>
+<p>4。超文本标记语言HTML</p>
+<p>HTML指的是超文本标记语言，是使用标记标签来描述网页的。</p>
+<p>HTML标签是由尖括号包围的关键词，比如&lt;html&gt;。HTML标签通常是成对出现的，标签对中的第一个标签是开始标签，第二个是结束标签，比如&lt;b&gt;和&lt;/b&gt;。</p>
+<p>HTML文档包含HTML标签和纯文本，也称为网页。Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容。</p>
+<p>五个基本的标签</p>
+<ul>
+<li>&lt;h1&gt; - &lt;h6&gt;等：定义HTML 标题。</li>
+<li>&lt;p&gt;：定义HTML 段落。</li>
+<li>&lt;a&gt;：定义HTML 链接。</li>
+<li>&lt;img&gt;：定义HTML 图像。</li>
+<li>&lt;div&gt; :HTML分组标签，定义文档中的分区或节。</li>
+</ul>
+<pre><code>&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;h2&gt;This is a heading&lt;/h2&gt;
+&lt;h3&gt;This is a heading&lt;/h3&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;This is a link&lt;/a&gt;
+
+&lt;img src=&quot;w3school.jpg&quot; width=&quot;104&quot; height=&quot;142&quot; /&gt;
+</code></pre><p>HTML 元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码。元素的内容是开始标签与结束标签之间的内容。大多数 HTML 元素可以嵌套（可以包含其他 HTML 元素），HTML 文档由嵌套的 HTML 元素构成。如下例包含3个HTML元素。</p>
+<pre><code>&lt;html&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>HTML 属性：HTML 标签可以拥有属性，属性提供了有关 HTML 元素的更多的信息，属性总是以名称/值对的形式出现，比如：name=”value”，属性总是在 HTML 元素的开始标签中规定；属性值应该始终被包括在引号内，双引号是最常用的，不过使用单引号也没有问题。</p>
+<p>HTML链接由&lt;a&gt;标签定义，链接的地址在 href 属性中指定：</p>
+<pre><code>&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;This is a link&lt;a&gt;
+</code></pre><p>转载于作者：Mr希灵</p>
+<p>链接：<a href="http://www.jianshu.com/p/0cec67708277" target="_blank" rel="external">http://www.jianshu.com/p/0cec67708277</a></p>
+</div><div class="tags"><a href="/tags/HTML/">HTML</a><a href="/tags/爬虫/">爬虫</a></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/2017/08/17/Python-技巧总结/" class="next">Python 技巧总结</a></div><div id="comments"><div id="uyan_frame"></div></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/18/爬虫的理论知识储备/">爬虫的理论知识储备</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/17/Python-技巧总结/">Python 技巧总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/16/first/">每天读点文学1</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/16/每天读点文学/">每天读点文学2</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/文摘/" style="font-size: 15px;">文摘</a> <a href="/tags/python笔记/" style="font-size: 15px;">python笔记</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/爬虫/" style="font-size: 15px;">爬虫</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 友情链接</i></div><ul></ul><a href="http://www.baidu.com/" title="百度" target="_blank">百度</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">luosilent.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?11080905";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script><script src="http://v2.uyan.cc/code/uyan.js?uid=2141801"></script></body></html>
