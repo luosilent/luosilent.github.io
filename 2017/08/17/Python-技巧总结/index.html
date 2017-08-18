@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -101,7 +101,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/17/Python-技巧总结/index.html">
 <meta property="og:site_name" content="luosilent">
 <meta property="og:description" content="1.枚举 - enumerate 可以有参数哦 之前我们这样操作： i = 0 for item in iterable:     print i, item     i += 1 现在我们这样操作： for i, item in enumerate(iterable):     print i, item enumerate函数还可以接收第二个参数。就像下面这样： &amp;gt;&amp;gt;&amp;gt;lis">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://litaotao.github.io/images/pycallgraph.jpg">
 <meta property="og:updated_time" content="2017-08-18T16:21:31.297Z">
 <meta name="twitter:card" content="summary">
@@ -115,14 +115,14 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -149,12 +149,22 @@
 
 
 
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?11080905";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -202,7 +212,27 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -212,7 +242,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -222,7 +252,27 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -264,7 +314,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="luosilent">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://wx4.sinaimg.cn/mw690/0069ddnsgy1fiocud9obdj305k05k745.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -286,9 +336,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-17T14:43:01+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-17T14:43:01+08:00">
                 2017-08-17
               </time>
             
@@ -499,6 +549,8 @@ is 判断是否是一个对象，使用id来判断的。
           
   <div class="comments" id="comments">
     
+      <div id="uyan_frame"></div>
+    
   </div>
 
 
@@ -525,7 +577,7 @@ is 判断是否是一个对象，使用id来判断的。
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://wx4.sinaimg.cn/mw690/0069ddnsgy1fiocud9obdj305k05k745.jpg"
                alt="luosilent" />
           <p class="site-author-name" itemprop="name">luosilent</p>
            
@@ -538,7 +590,7 @@ is 判断是否是一个对象，使用id来判断的。
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
                 <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -551,7 +603,7 @@ is 判断是否是一个对象，使用id来判断的。
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -603,15 +655,15 @@ is 判断是否是一个对象，使用id来判断的。
 
 
   <div class="powered-by">
-    Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
   </div>
 
   <span class="post-meta-divider">|</span>
 
   <div class="theme-info">
-    Theme &mdash;
+    主题 &mdash;
     <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-      NexT.Muse
+      NexT.Pisces
     </a>
   </div>
 
@@ -697,6 +749,13 @@ is 判断是否是一个对象，使用id来判断的。
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
@@ -724,6 +783,14 @@ is 判断是否是一个对象，使用id来判断的。
 
 
 
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2141801"></script>
+      <!-- UY END -->
+    
   
 
 
