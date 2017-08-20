@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://luoing.top/"/>
-  <updated>2017-08-18T18:18:56.627Z</updated>
+  <updated>2017-08-20T15:53:31.715Z</updated>
   <id>http://luoing.top/</id>
   
   <author>
@@ -16,11 +16,110 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>每天读点文学3</title>
+    <link href="http://luoing.top/2017/08/20/%E6%AF%8F%E6%97%A5%E8%AF%BB%E7%82%B9%E6%96%87%E5%AD%A63/"/>
+    <id>http://luoing.top/2017/08/20/每日读点文学3/</id>
+    <published>2017-08-20T15:48:55.000Z</published>
+    <updated>2017-08-20T15:53:31.715Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="每天读点文学"><a href="#每天读点文学" class="headerlink" title="每天读点文学"></a>每天读点文学</h2><p><img src="http://wx1.sinaimg.cn/mw690/0069ddnsgy1fiqm72gillj30c80c7q3k.jpg" alt="test">  </p>
+<p>别在树下徘徊，别在雨中沉思，别在黑暗中落泪。向前看，不要回头，只要你勇于面对抬起头来，就会发现，分数的阴霾不过是短暂的雨季。向前看，还有一片明亮的天，不会使人感到彷徨。<br>——莎士比亚 《暴风雨》</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;每天读点文学&quot;&gt;&lt;a href=&quot;#每天读点文学&quot; class=&quot;headerlink&quot; title=&quot;每天读点文学&quot;&gt;&lt;/a&gt;每天读点文学&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://wx1.sinaimg.cn/mw690/0069ddnsgy1fiqm7
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="http://luoing.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="文摘" scheme="http://luoing.top/tags/%E6%96%87%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>xpath和css解析</title>
+    <link href="http://luoing.top/2017/08/20/xpath%E5%92%8Ccss%E8%A7%A3%E6%9E%90/"/>
+    <id>http://luoing.top/2017/08/20/xpath和css解析/</id>
+    <published>2017-08-20T15:11:27.000Z</published>
+    <updated>2017-08-20T15:28:45.556Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="网页解析"><a href="#网页解析" class="headerlink" title="网页解析"></a>网页解析</h2><p>一.    xpath 简介与语法概要</p>
+<p>xpath 是 w3c 的一种标准。简单来说就是可以让我们以路径的形式访问 html 网页中的各个元素。其中最主要的两个 为 // 与 /。前者代表 路径下的所有元素， 后者代表路径下的子元素。具体语法如下：</p>
+<p>基本语法：</p>
+<ol>
+<li>question      # 选取所有 question 元素的所有子节点  </li>
+<li>/question     #选取根元素 question  </li>
+<li>question/a    # 选取 question 元素下所有为 a 的子元素  </li>
+<li>//div         # 选取所有的 div 元素，不论其出现在文档的任何地方  </li>
+<li>question//div # 选取 question 元素下所有的 div 后代元素 (/ 选取的是直接子元素，这里是所有的后代元素)  </li>
+<li>question//span/text() #选取 question 元素下所有 span 元素中的文本值  </li>
+<li>question//a/@href     #选取 question 元素下所有 a 元素中的 href 属性值。 @ 后面可以是任意属性名，均可以取到值  </li>
+</ol>
+<p>带有限定性质的语法：</p>
+<ol>
+<li>/question/div[1]        # 选取 question 的第一个 div 子元素。 注意这里第一个是从索引 1 开始的</li>
+<li>/question/div[last()]   # 选取 question 第最后一个 div 子元素</li>
+<li>/question/div[last()-1] # 选取 question 的倒数第二个 div 子元素</li>
+<li>//div[@lang]            # 选取所有拥有lang 属性的 div 元素</li>
+<li>//div[@lang=’eng’]      # 选取所有 lang 属性为 eng 的 div 元素</li>
+</ol>
+<p>其他语法补充：</p>
+<ol>
+<li>/div/*    # 选取属于 div 元素的所有子节点</li>
+<li>//*       # 选取所有元素</li>
+<li>//div/a | //div/p #选 取所有 div 元素的 a 元素或者 p 元素</li>
+<li>//span | //input  # 选取文档中所有的 span 和 input 元素</li>
+</ol>
+<p>二. css 语法概要</p>
+<p>熟悉前端的同学对 css 选择器一定不会陌生，比如 jQuery 中通过各种 css 选择器语法进行 DOM 操作等。这里对其语法进行简要的总结，便于复习。</p>
+<p>基本查询语法</p>
+<pre><code> *        # 选取所有节点
+#title    # 选取 id 为 title 的元素
+.col-md   # 选取所有 class 包含 col-md 的元素
+li a      # 选取所有 li 下的 a 元素
+ul + p    # 选取 ul 后面的第一个 p 元素
+div#title &gt; ul   # 选取 id 为 title 的 div 的第一个 ul 子元素
+ul ~ p    # 选取 与 url 相邻的所有 p 元素
+span#title ::text  # 选取 id 为 title 的 span 元素的文本值
+a.link::attr(href) # 选取 class 为 link 的 a 元素的 href 属性值
+</code></pre><p>属性相关查询语法</p>
+<pre><code>a[title]  # 选取所有有 title 属性的 a 元素
+a[href=&apos;http://stackoverflow.com/&apos;] # 选取所有 href 属性为 http://stackoverflow.com/ 的 a 元素
+a[href*=&quot;stackoverflow&quot;] # 选取所有 href 属性包含 stackoverflow 的 a 元素
+a[href^=&apos;https&apos;] # 选取所有 href 属性值以 https 开头的 a 元素
+a[href$=&apos;.jpg&apos;]  # 选取所有 href 属性值以 .jpg 为结尾的 a 元素
+input[type=radio]:checked # 选择选中的 radio 的元素
+</code></pre><p>其他语法</p>
+<pre><code>div:not(.title)   # 选取所有 class 不是 title 的 div 元素
+li:nth-child(3) # 选取第三个元素
+tr:nth-child(2n) # 第偶数个元素
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;网页解析&quot;&gt;&lt;a href=&quot;#网页解析&quot; class=&quot;headerlink&quot; title=&quot;网页解析&quot;&gt;&lt;/a&gt;网页解析&lt;/h2&gt;&lt;p&gt;一.    xpath 简介与语法概要&lt;/p&gt;
+&lt;p&gt;xpath 是 w3c 的一种标准。简单来说就是可以让我们以路径的形式
+    
+    </summary>
+    
+    
+      <category term="网页" scheme="http://luoing.top/tags/%E7%BD%91%E9%A1%B5/"/>
+    
+      <category term="xpath" scheme="http://luoing.top/tags/xpath/"/>
+    
+      <category term="css" scheme="http://luoing.top/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>爬虫的理论知识储备</title>
     <link href="http://luoing.top/2017/08/18/%E7%88%AC%E8%99%AB%E7%9A%84%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/"/>
     <id>http://luoing.top/2017/08/18/爬虫的理论知识储备/</id>
     <published>2017-08-18T15:23:09.000Z</published>
-    <updated>2017-08-18T18:18:56.627Z</updated>
+    <updated>2017-08-19T09:01:08.571Z</updated>
     
     <content type="html"><![CDATA[<p>网络爬虫，是一种按照一定的规则，自动地抓取万维网信息的程序或脚本。</p>
 <p>爬虫通过网页的链接地址来寻找网页并获取网页内容，再根据网页中其他链接不断循环爬取。</p>
@@ -111,16 +210,15 @@
     <link href="http://luoing.top/2017/08/17/%E6%AF%8F%E5%A4%A9%E8%AF%BB%E7%82%B9%E6%96%87%E5%AD%A6/"/>
     <id>http://luoing.top/2017/08/17/每天读点文学/</id>
     <published>2017-08-17T12:12:14.000Z</published>
-    <updated>2017-08-19T08:22:16.151Z</updated>
+    <updated>2017-08-20T15:54:04.781Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://wx2.sinaimg.cn/small/0069ddnsgy1fiof37k8xbj305k05kdfs.jpg" alt="test">  </p>
+    <content type="html"><![CDATA[<h2 id="每天读点文学"><a href="#每天读点文学" class="headerlink" title="每天读点文学"></a>每天读点文学</h2><p><img src="http://wx2.sinaimg.cn/small/0069ddnsgy1fiof37k8xbj305k05kdfs.jpg" alt="test">  </p>
 <p>我喜欢回顾，是因为我不喜欢忘记。我总认为，在世间，有些人、有些事、有些时刻似乎都有一种特定的安排，在当时也许不觉得，但是在以后回想起来，却都有一种深意。我有过许多美丽的时刻，实在舍不得将它们忘记。<br> ——席慕容《透明的哀伤》</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://wx2.sinaimg.cn/small/0069ddnsgy1fiof37k8xbj305k05kdfs.jpg&quot; alt=&quot;test&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;我喜欢回顾，是因为我不喜欢忘记。我总认为，在世间，有些人、有些事、有些时刻似乎都
+      &lt;h2 id=&quot;每天读点文学&quot;&gt;&lt;a href=&quot;#每天读点文学&quot; class=&quot;headerlink&quot; title=&quot;每天读点文学&quot;&gt;&lt;/a&gt;每天读点文学&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://wx2.sinaimg.cn/small/0069ddnsgy1fiof3
     
     </summary>
     
@@ -136,7 +234,7 @@
     <link href="http://luoing.top/2017/08/17/Python-%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/"/>
     <id>http://luoing.top/2017/08/17/Python-技巧总结/</id>
     <published>2017-08-17T06:43:01.000Z</published>
-    <updated>2017-08-18T16:21:31.297Z</updated>
+    <updated>2017-08-19T09:00:01.869Z</updated>
     
     <content type="html"><![CDATA[<p>1.枚举 - enumerate 可以有参数哦</p>
 <p>之前我们这样操作：</p>
@@ -254,7 +352,9 @@ for item in iterable:
     </summary>
     
     
-      <category term="python笔记" scheme="http://luoing.top/tags/python%E7%AC%94%E8%AE%B0/"/>
+      <category term="python" scheme="http://luoing.top/tags/python/"/>
+    
+      <category term="笔记" scheme="http://luoing.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -263,16 +363,15 @@ for item in iterable:
     <link href="http://luoing.top/2017/08/16/first/"/>
     <id>http://luoing.top/2017/08/16/first/</id>
     <published>2017-08-16T15:12:14.000Z</published>
-    <updated>2017-08-19T08:23:00.085Z</updated>
+    <updated>2017-08-20T15:54:46.258Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://wx3.sinaimg.cn/mw690/0069ddnsgy1fiod974sc3j30c80c8gn1.jpg" alt="test">  </p>
+    <content type="html"><![CDATA[<h2 id="每天读点文学"><a href="#每天读点文学" class="headerlink" title="每天读点文学"></a>每天读点文学</h2><p><img src="http://wx3.sinaimg.cn/mw690/0069ddnsgy1fiod974sc3j30c80c8gn1.jpg" alt="test">  </p>
 <p>不要着急，最好的总会在最不经意的时候出现。那我们要做的就是：怀揣希望去努力，静待美好的出现。————泰戈尔 ​​​​</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://wx3.sinaimg.cn/mw690/0069ddnsgy1fiod974sc3j30c80c8gn1.jpg&quot; alt=&quot;test&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;不要着急，最好的总会在最不经意的时候出现。那我们要做的就是：怀揣希望去努力，静待
+      &lt;h2 id=&quot;每天读点文学&quot;&gt;&lt;a href=&quot;#每天读点文学&quot; class=&quot;headerlink&quot; title=&quot;每天读点文学&quot;&gt;&lt;/a&gt;每天读点文学&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://wx3.sinaimg.cn/mw690/0069ddnsgy1fiod9
     
     </summary>
     
