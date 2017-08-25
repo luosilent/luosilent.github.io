@@ -55,11 +55,11 @@
     <link href="http://luoing.top/2017/08/25/python%E7%88%AC%E8%99%AB%E6%8A%80%E5%B7%A7/"/>
     <id>http://luoing.top/2017/08/25/python爬虫技巧/</id>
     <published>2017-08-25T15:39:17.000Z</published>
-    <updated>2017-08-25T15:55:59.775Z</updated>
+    <updated>2017-08-25T16:35:26.208Z</updated>
     
     <content type="html"><![CDATA[<h1 id="总结python爬虫技巧"><a href="#总结python爬虫技巧" class="headerlink" title="总结python爬虫技巧"></a>总结python爬虫技巧</h1><h2 id="1、基本抓取网页"><a href="#1、基本抓取网页" class="headerlink" title="1、基本抓取网页"></a>1、基本抓取网页</h2><p><strong>get方法</strong></p>
 <pre><code>import urllib2
-url  &quot;http://www.baidu.com&quot;
+url = &quot;http://www.baidu.com&quot;
 respons = urllib2.urlopen(url)
 print response.read()
 </code></pre><p><strong>post方法</strong></p>
