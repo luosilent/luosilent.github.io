@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://luoing.top/"/>
-  <updated>2017-08-30T16:58:10.196Z</updated>
+  <updated>2017-08-30T17:22:16.970Z</updated>
   <id>http://luoing.top/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://luoing.top/2017/08/31/python%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>http://luoing.top/2017/08/31/python面试题/</id>
     <published>2017-08-30T16:36:29.000Z</published>
-    <updated>2017-08-30T16:58:10.196Z</updated>
+    <updated>2017-08-30T17:22:16.970Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="1-单引号，双引号，三引号的区别"><a href="#1-单引号，双引号，三引号的区别" class="headerlink" title="1.单引号，双引号，三引号的区别"></a>1.单引号，双引号，三引号的区别</h1><p>分别阐述3种引号用的场景和区别</p>
+    <content type="html"><![CDATA[<h1 id="单引号，双引号，三引号的区别"><a href="#单引号，双引号，三引号的区别" class="headerlink" title="单引号，双引号，三引号的区别"></a>单引号，双引号，三引号的区别</h1><p>分别阐述3种引号用的场景和区别</p>
 <p><strong>1).单引号和双引号主要用来表示字符串</strong></p>
 <p>比如:</p>
 <p>单引号:’python’</p>
@@ -33,7 +33,7 @@
 <p>区别:</p>
 <p>若你的字符串里面本身包含单引号,必须用双引号</p>
 <p>比如:”can’t find the log\n”</p>
-<h1 id="2-Python的参数传递是值传递还是引用传递"><a href="#2-Python的参数传递是值传递还是引用传递" class="headerlink" title="2.Python的参数传递是值传递还是引用传递"></a>2.Python的参数传递是值传递还是引用传递</h1><p>举例说明Python函数参数传递的几种形式，并说明函数传参是值传递还是引用传递</p>
+<h1 id="Python的参数传递是值传递还是引用传递"><a href="#Python的参数传递是值传递还是引用传递" class="headerlink" title="Python的参数传递是值传递还是引用传递"></a>Python的参数传递是值传递还是引用传递</h1><p>举例说明Python函数参数传递的几种形式，并说明函数传参是值传递还是引用传递</p>
 <p><strong>1).Python的参数传递有：</strong></p>
 <p>位置参数</p>
 <p>默认参数，</p>
@@ -44,13 +44,13 @@
 <p>像整数和字符串这样的不可变对象，是通过拷贝进行传递的，因为你无论如何都不可能在原处改变不可变对象</p>
 <p>b.可变参数是用引用传递的</p>
 <p>比如像列表，字典这样的对象是通过引用传递，和C语言里面的用指针传递数组很相似，可变对象能在函数内部改变.</p>
-<h1 id="3-什么是lambda函数？它有什么好处"><a href="#3-什么是lambda函数？它有什么好处" class="headerlink" title="3.什么是lambda函数？它有什么好处?"></a>3.什么是lambda函数？它有什么好处?</h1><p>举例说明lambda的用法，并说明用lambda的优点</p>
+<h1 id="什么是lambda函数？它有什么好处"><a href="#什么是lambda函数？它有什么好处" class="headerlink" title="什么是lambda函数？它有什么好处?"></a>什么是lambda函数？它有什么好处?</h1><p>举例说明lambda的用法，并说明用lambda的优点</p>
 <p><strong>1).lambda的用法：</strong></p>
 <p>lambda是匿名函数，用法如下:lambda arg1,arg2..argN:expression using args</p>
 <p><strong>2).优点</strong></p>
 <p>lambda能和def做同样种类的工作，特别是对于那些逻辑简单的函数，直接用lambda会更简洁，而且省去取函数名的麻烦(给函数取名是个技术活)</p>
-<h1 id="4-字符串格式化-和-format的区别"><a href="#4-字符串格式化-和-format的区别" class="headerlink" title="4.字符串格式化:%和.format的区别"></a>4.字符串格式化:%和.format的区别</h1><p>字符串的format函数非常灵活，很强大,可以接受的参数不限个数，并且位置可以不按顺序，而且有较为强大的格式限定符(比如:填充，对齐,精度等)</p>
-<h1 id="5-Python是如何进行内存管理的"><a href="#5-Python是如何进行内存管理的" class="headerlink" title="5.Python是如何进行内存管理的"></a>5.Python是如何进行内存管理的</h1><p><strong>1).对象的引用计数机制</strong></p>
+<h1 id="字符串格式化-和-format的区别"><a href="#字符串格式化-和-format的区别" class="headerlink" title="字符串格式化:%和.format的区别"></a>字符串格式化:%和.format的区别</h1><p>字符串的format函数非常灵活，很强大,可以接受的参数不限个数，并且位置可以不按顺序，而且有较为强大的格式限定符(比如:填充，对齐,精度等)</p>
+<h1 id="Python是如何进行内存管理的"><a href="#Python是如何进行内存管理的" class="headerlink" title="Python是如何进行内存管理的"></a>Python是如何进行内存管理的</h1><p><strong>1).对象的引用计数机制</strong></p>
 <p>Python内部使用引用计数，来保持追踪内存中的对象，所有对象都有引用计数。</p>
 <p>引用计数增加的情况：</p>
 <p>一个对象分配一个新名称</p>
@@ -64,7 +64,7 @@
 <p>Python提供了对内存的垃圾收集机制，但是它将不用的内存放到内存池而不是返回给操作系统:</p>
 <p>Pymalloc机制：为了加速Python的执行效率，Python引入了一个内存池机制，用于管理对小块内存的申请和释放。</p>
 <p>对于Python对象，如整数，浮点数和List，都有其独立的私有内存池，对象间不共享他们的内存池。也就是说如果你分配又释放了大量的整数，用于缓存这些整数的内存就不能再分配给浮点数。</p>
-<h1 id="6-写一个函数-输入一个字符串-返回倒序排列的结果"><a href="#6-写一个函数-输入一个字符串-返回倒序排列的结果" class="headerlink" title="6.写一个函数, 输入一个字符串, 返回倒序排列的结果"></a>6.写一个函数, 输入一个字符串, 返回倒序排列的结果</h1><p>输入: string_reverse(‘abcdef’), 返回: ‘fedcba’,写出你能想到的多种方法</p>
+<h1 id="写一个函数-输入一个字符串-返回倒序排列的结果"><a href="#写一个函数-输入一个字符串-返回倒序排列的结果" class="headerlink" title="写一个函数, 输入一个字符串, 返回倒序排列的结果"></a>写一个函数, 输入一个字符串, 返回倒序排列的结果</h1><p>输入: string_reverse(‘abcdef’), 返回: ‘fedcba’,写出你能想到的多种方法</p>
 <p><strong>1).利用字符串本身的翻转</strong></p>
 <pre><code>def string_reverse1(text=&apos;abcdef&apos;):
 
@@ -75,7 +75,7 @@ return text[::-1]
 <p><img src="https://ask.hellobi.com/uploads/article/20170329/c3e035f6db927df1b6e933cebfaa7d58.png" alt="3">  </p>
 <p><strong>5).递归</strong></p>
 <p><img src="https://ask.hellobi.com/uploads/article/20170329/66fbf7bd362471215bc4fec641784494.png" alt="4"></p>
-<h1 id="7-按升序合并如下两个list-并去除重复的元素"><a href="#7-按升序合并如下两个list-并去除重复的元素" class="headerlink" title="7.按升序合并如下两个list, 并去除重复的元素"></a>7.按升序合并如下两个list, 并去除重复的元素</h1><pre><code>list1 = [2, 3, 8, 4, 9, 5, 6]
+<h1 id="按升序合并如下两个list-并去除重复的元素"><a href="#按升序合并如下两个list-并去除重复的元素" class="headerlink" title="按升序合并如下两个list, 并去除重复的元素"></a>按升序合并如下两个list, 并去除重复的元素</h1><pre><code>list1 = [2, 3, 8, 4, 9, 5, 6]
 
 list2 = [5, 6, 10, 17, 11, 2]
 </code></pre><p><strong>1).最简单的方法用set</strong></p>
@@ -85,7 +85,7 @@ print set(list3)
 </code></pre><p><strong>2).递归</strong></p>
 <p>先选一个中间数，然后一边是小的数字，一边是大的数字，然后再循环递归，排完序(是不是想起了c里面的冒泡)</p>
 <p><img src="https://ask.hellobi.com/uploads/article/20170329/25169f478123661a5ef28145be33e90f.png" alt="5"></p>
-<h1 id="8-以下的代码的输出将是什么-说出你的答案并解释"><a href="#8-以下的代码的输出将是什么-说出你的答案并解释" class="headerlink" title="8.以下的代码的输出将是什么? 说出你的答案并解释"></a>8.以下的代码的输出将是什么? 说出你的答案并解释</h1><pre><code>class Parent(object):
+<h1 id="以下的代码的输出将是什么-说出你的答案并解释"><a href="#以下的代码的输出将是什么-说出你的答案并解释" class="headerlink" title="以下的代码的输出将是什么? 说出你的答案并解释"></a>以下的代码的输出将是什么? 说出你的答案并解释</h1><pre><code>class Parent(object):
     x = 1
 class Child1(Parent):
     pass
@@ -106,13 +106,13 @@ print Parent.x, Child1.x, Child2.x
 <p>首先，在父类中设置 x = 1 会使得类变量 x 在引用该类和其任何子类中的值为 1。这就是因为第一个 print 语句的输出是 1 1 1</p>
 <p>然后，如果任何它的子类重写了该值（例如，我们执行语句 Child1.x = 2）该值仅仅在子类中被改变。这就是为什么第二个 print 语句的输出是 1 2 1</p>
 <p>最后，如果该值在父类中被改变（例如，我们执行语句 Parent.x = 3），这个改变会影响到任何未重写该值的子类当中的值（在这个示例中被影响的子类是 Child2）。这就是为什么第三个 print 输出是 3 2 3</p>
-<h1 id="9-下面的代码会不会报错"><a href="#9-下面的代码会不会报错" class="headerlink" title="9.下面的代码会不会报错"></a>9.下面的代码会不会报错</h1><pre><code>list = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]
+<h1 id="下面的代码会不会报错"><a href="#下面的代码会不会报错" class="headerlink" title="下面的代码会不会报错"></a>下面的代码会不会报错</h1><pre><code>list = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]
 print list[10:]
 </code></pre><p>不会报错，而且会输出一个 []，并且不会导致一个 IndexError</p>
 <p>解答:</p>
 <p>当试图访问一个超过列表索引值的成员将导致 IndexError（比如访问以上列表的 list[10]）。尽管如此，试图访问一个列表的以超出列表长度数作为开始索引的切片将不会导致 IndexError，并且将仅仅返回一个空列表</p>
 <p>一个讨厌的小问题是它会导致出现 bug ，并且这个问题是难以追踪的，因为它在运行时不会引发错误，吐血啊~~</p>
-<h1 id="10-说出下面list1-list2-list3的输出值"><a href="#10-说出下面list1-list2-list3的输出值" class="headerlink" title="10.说出下面list1,list2,list3的输出值"></a>10.说出下面list1,list2,list3的输出值</h1><pre><code>def extendList(val, list=[]):
+<h1 id="说出下面list1-list2-list3的输出值"><a href="#说出下面list1-list2-list3的输出值" class="headerlink" title="说出下面list1,list2,list3的输出值"></a>说出下面list1,list2,list3的输出值</h1><pre><code>def extendList(val, list=[]):
     list.append(val)
     return list
 list1 = extendList(10)
@@ -130,7 +130,7 @@ list3 = [10, &apos;a&apos;]
 <p>因此，list1 和 list3 是操作的相同的列表。而list2是操作的它创建的独立的列表（通过传递它自己的空列表作为list参数的值）</p>
 <p>所以这一点一定要切记切记.下面我们把list置为None就可以避免一些麻烦了</p>
 <p><img src="https://ask.hellobi.com/uploads/article/20170329/458a01787506997ce42a8e054d2cee11.png" alt="6"></p>
-<h1 id="11-写出你认为最Pythonic的代码"><a href="#11-写出你认为最Pythonic的代码" class="headerlink" title="11.写出你认为最Pythonic的代码"></a>11.写出你认为最Pythonic的代码</h1><p>Pythonic编程风格是Python的一种追求的风格，精髓就是追求直观，简洁而容易读.</p>
+<h1 id="写出你认为最Pythonic的代码"><a href="#写出你认为最Pythonic的代码" class="headerlink" title="写出你认为最Pythonic的代码"></a>写出你认为最Pythonic的代码</h1><p>Pythonic编程风格是Python的一种追求的风格，精髓就是追求直观，简洁而容易读.</p>
 <p>下面是一些比较好的例子</p>
 <p><strong>1).交互变量</strong></p>
 <p>非Pythonic<br>    temp = a<br>    a = b<br>    b = temp<br>    pythonic:<br>    a,b=b,a<br><strong>2).判断其值真假</strong></p>
@@ -148,7 +148,8 @@ dict(zip(keys,values))
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1-单引号，双引号，三引号的区别&quot;&gt;&lt;a href=&quot;#1-单引号，双引号，三引号的区别&quot; class=&quot;headerlink&quot; title=&quot;1.单引号，双引号，三引号的区别&quot;&gt;&lt;/a&gt;1.单引号，双引号，三引号的区别&lt;/h1&gt;&lt;p&gt;分别阐述3种引号用的场景和区
+      &lt;h1 id=&quot;单引号，双引号，三引号的区别&quot;&gt;&lt;a href=&quot;#单引号，双引号，三引号的区别&quot; class=&quot;headerlink&quot; title=&quot;单引号，双引号，三引号的区别&quot;&gt;&lt;/a&gt;单引号，双引号，三引号的区别&lt;/h1&gt;&lt;p&gt;分别阐述3种引号用的场景和区别&lt;/p&gt;
+&lt;p
     
     </summary>
     
@@ -199,9 +200,9 @@ dict(zip(keys,values))
     <link href="http://luoing.top/2017/08/25/python%E7%88%AC%E8%99%AB%E6%8A%80%E5%B7%A7/"/>
     <id>http://luoing.top/2017/08/25/python爬虫技巧/</id>
     <published>2017-08-25T15:39:17.000Z</published>
-    <updated>2017-08-25T16:35:26.208Z</updated>
+    <updated>2017-08-30T17:22:48.944Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="总结python爬虫技巧"><a href="#总结python爬虫技巧" class="headerlink" title="总结python爬虫技巧"></a>总结python爬虫技巧</h1><h2 id="1、基本抓取网页"><a href="#1、基本抓取网页" class="headerlink" title="1、基本抓取网页"></a>1、基本抓取网页</h2><p><strong>get方法</strong></p>
+    <content type="html"><![CDATA[<h1 id="总结python爬虫技巧"><a href="#总结python爬虫技巧" class="headerlink" title="总结python爬虫技巧"></a>总结python爬虫技巧</h1><h2 id="基本抓取网页"><a href="#基本抓取网页" class="headerlink" title="基本抓取网页"></a>基本抓取网页</h2><p><strong>get方法</strong></p>
 <pre><code>import urllib2
 url = &quot;http://www.baidu.com&quot;
 respons = urllib2.urlopen(url)
@@ -216,7 +217,7 @@ form_data = urllib.urlencode(form)
 request = urllib2.Request(url,form_data)
 response = urllib2.urlopen(request)
 print response.read()
-</code></pre><h2 id="2、使用代理IP"><a href="#2、使用代理IP" class="headerlink" title="2、使用代理IP"></a>2、使用代理IP</h2><p>  在开发爬虫过程中经常会遇到IP被封掉的情况，这时就需要用到代理IP；</p>
+</code></pre><h2 id="使用代理IP"><a href="#使用代理IP" class="headerlink" title="使用代理IP"></a>使用代理IP</h2><p>  在开发爬虫过程中经常会遇到IP被封掉的情况，这时就需要用到代理IP；</p>
 <p>在urllib2包中有ProxyHandler类，通过此类可以设置代理访问网页，如下代码片段：</p>
 <pre><code>import urllib2
 
@@ -225,7 +226,7 @@ opener = urllib2.build_opener(proxy)
 urllib2.install_opener(opener)
 response = urllib2.urlopen(&apos;http://www.baidu.com&apos;)
 print response.read()
-</code></pre><h2 id="3、Cookies处理"><a href="#3、Cookies处理" class="headerlink" title="3、Cookies处理"></a>3、Cookies处理</h2><p>   cookies是某些网站为了辨别用户身份、进行session跟踪而储存在用户本地终端上的数据(通常经过加密)，python提供了cookielib模块用于处理cookies，cookielib模块的主要作用是提供可存储cookie的对象，以便于与urllib2模块配合使用来访问Internet资源.</p>
+</code></pre><h2 id="Cookies处理"><a href="#Cookies处理" class="headerlink" title="Cookies处理"></a>Cookies处理</h2><p>   cookies是某些网站为了辨别用户身份、进行session跟踪而储存在用户本地终端上的数据(通常经过加密)，python提供了cookielib模块用于处理cookies，cookielib模块的主要作用是提供可存储cookie的对象，以便于与urllib2模块配合使用来访问Internet资源.</p>
 <p>代码片段：</p>
 <pre><code>import urllib2, cookielib
 
@@ -237,7 +238,7 @@ content = urllib2.urlopen(&apos;http://XXXX&apos;).read()
 <p>  手动添加cookie</p>
 <pre><code>cookie = &quot;PHPSESSID=91rurfqm2329bopnosfu4fvmu7; kmsign=55d2c12c9b1e3; KMUID=b6Ejc1XSwPq9o756AxnBAg=&quot;
 request.add_header(&quot;Cookie&quot;, cookie)
-</code></pre><h2 id="4、伪装成浏览器"><a href="#4、伪装成浏览器" class="headerlink" title="4、伪装成浏览器"></a>4、伪装成浏览器</h2><p>  某些网站反感爬虫的到访，于是对爬虫一律拒绝请求。所以用urllib2直接访问网站经常会出现HTTP Error 403: Forbidden的情况</p>
+</code></pre><h2 id="伪装成浏览器"><a href="#伪装成浏览器" class="headerlink" title="伪装成浏览器"></a>伪装成浏览器</h2><p>  某些网站反感爬虫的到访，于是对爬虫一律拒绝请求。所以用urllib2直接访问网站经常会出现HTTP Error 403: Forbidden的情况</p>
 <p>对有些 header 要特别留意，Server 端会针对这些 header 做检查</p>
 <p>  1.User-Agent 有些 Server 或 Proxy 会检查该值，用来判断是否是浏览器发起的 Request</p>
 <p>  2.Content-Type 在使用 REST 接口时，Server 会检查该值，用来确定 HTTP Body 中的内容该怎样解析。</p>
@@ -252,15 +253,15 @@ request = urllib2.Request(
     headers = headers
 )
 print urllib2.urlopen(request).read()
-</code></pre><h2 id="5、页面解析"><a href="#5、页面解析" class="headerlink" title="5、页面解析"></a>5、页面解析</h2><p>  对于页面解析最强大的当然是正则表达式，这个对于不同网站不同的使用者都不一样，就不用过多的说明，附两个比较好的网址：</p>
+</code></pre><h2 id="页面解析"><a href="#页面解析" class="headerlink" title="页面解析"></a>页面解析</h2><p>  对于页面解析最强大的当然是正则表达式，这个对于不同网站不同的使用者都不一样，就不用过多的说明，附两个比较好的网址：</p>
 <p>正则表达式入门：<a href="http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html" target="_blank" rel="external">http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html</a></p>
 <p>正则表达式在线测试：<a href="http://tool.oschina.net/regex/" target="_blank" rel="external">http://tool.oschina.net/regex/</a> </p>
 <p>其次就是解析库了，常用的有两个lxml和BeautifulSoup，对于这两个的使用介绍两个比较好的网站：</p>
 <p>lxml：<a href="http://my.oschina.net/jhao104/blog/639448" target="_blank" rel="external">http://my.oschina.net/jhao104/blog/639448</a></p>
 <p>BeautifulSoup：<a href="http://cuiqingcai.com/1319.html" target="_blank" rel="external">http://cuiqingcai.com/1319.html</a></p>
 <p>对于这两个库，我的评价是，都是HTML/XML的处理库，Beautifulsoup纯python实现，效率低，但是功能实用，比如能用通过结果搜索获得某个HTML节点的源码；lxmlC语言编码，高效，支持Xpath</p>
-<h2 id="6、验证码的处理"><a href="#6、验证码的处理" class="headerlink" title="6、验证码的处理"></a>6、验证码的处理</h2><p>对于一些简单的验证码，可以进行简单的识别。本人也只进行过一些简单的验证码识别。但是有些反人类的验证码，比如12306，可以通过打码平台进行人工打码，当然这是要付费的。</p>
-<h2 id="7、gzip压缩"><a href="#7、gzip压缩" class="headerlink" title="7、gzip压缩"></a>7、gzip压缩</h2><p>  有没有遇到过某些网页，不论怎么转码都是一团乱码。哈哈，那说明你还不知道许多web服务具有发送压缩数据的能力，这可以将网络线路上传输的大量数据消减 60% 以上。这尤其适用于 XML web 服务，因为 XML 数据 的压缩率可以很高。</p>
+<h2 id="验证码的处理"><a href="#验证码的处理" class="headerlink" title="验证码的处理"></a>验证码的处理</h2><p>对于一些简单的验证码，可以进行简单的识别。本人也只进行过一些简单的验证码识别。但是有些反人类的验证码，比如12306，可以通过打码平台进行人工打码，当然这是要付费的。</p>
+<h2 id="gzip压缩"><a href="#gzip压缩" class="headerlink" title="gzip压缩"></a>gzip压缩</h2><p>  有没有遇到过某些网页，不论怎么转码都是一团乱码。哈哈，那说明你还不知道许多web服务具有发送压缩数据的能力，这可以将网络线路上传输的大量数据消减 60% 以上。这尤其适用于 XML web 服务，因为 XML 数据 的压缩率可以很高。</p>
 <p>但是一般服务器不会为你发送压缩数据，除非你告诉服务器你可以处理压缩数据。</p>
 <p>于是需要这样修改代码：</p>
 <pre><code>import urllib2, httplib
@@ -277,7 +278,7 @@ compresseddata = f.read()
 compressedstream = StringIO.StringIO(compresseddata)
 gzipper = gzip.GzipFile(fileobj=compressedstream) 
 print gzipper.read()
-</code></pre><h2 id="8、多线程并发抓取"><a href="#8、多线程并发抓取" class="headerlink" title="8、多线程并发抓取"></a>8、多线程并发抓取</h2><p>  单线程太慢的话，就需要多线程了，这里给个简单的线程池模板 这个程序只是简单地打印了1-10，但是可以看出是并发的。</p>
+</code></pre><h2 id="多线程并发抓取"><a href="#多线程并发抓取" class="headerlink" title="多线程并发抓取"></a>多线程并发抓取</h2><p>  单线程太慢的话，就需要多线程了，这里给个简单的线程池模板 这个程序只是简单地打印了1-10，但是可以看出是并发的。</p>
 <p>虽然说python的多线程很鸡肋，但是对于爬虫这种网络频繁型，还是能一定程度提高效率的。</p>
 <pre><code>from threading import Thread
 from Queue import Queue
@@ -313,7 +314,7 @@ q.join()
     
     <summary type="html">
     
-      &lt;h1 id=&quot;总结python爬虫技巧&quot;&gt;&lt;a href=&quot;#总结python爬虫技巧&quot; class=&quot;headerlink&quot; title=&quot;总结python爬虫技巧&quot;&gt;&lt;/a&gt;总结python爬虫技巧&lt;/h1&gt;&lt;h2 id=&quot;1、基本抓取网页&quot;&gt;&lt;a href=&quot;#1、基本抓
+      &lt;h1 id=&quot;总结python爬虫技巧&quot;&gt;&lt;a href=&quot;#总结python爬虫技巧&quot; class=&quot;headerlink&quot; title=&quot;总结python爬虫技巧&quot;&gt;&lt;/a&gt;总结python爬虫技巧&lt;/h1&gt;&lt;h2 id=&quot;基本抓取网页&quot;&gt;&lt;a href=&quot;#基本抓取网页&quot;
     
     </summary>
     
@@ -836,9 +837,9 @@ return render(req,&quot;my backend.html&quot;,locals())
     <link href="http://luoing.top/2017/08/20/xpath%E5%92%8Ccss%E8%A7%A3%E6%9E%90/"/>
     <id>http://luoing.top/2017/08/20/xpath和css解析/</id>
     <published>2017-08-20T15:11:27.000Z</published>
-    <updated>2017-08-23T02:08:28.461Z</updated>
+    <updated>2017-08-30T17:24:13.975Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="一-xpath-简介与语法概要"><a href="#一-xpath-简介与语法概要" class="headerlink" title="一.    xpath 简介与语法概要"></a>一.    xpath 简介与语法概要</h1><p>xpath 是 w3c 的一种标准。简单来说就是可以让我们以路径的形式访问 html 网页中的各个元素。其中最主要的两个 为 // 与 /。前者代表 路径下的所有元素， 后者代表路径下的子元素。具体语法如下：</p>
+    <content type="html"><![CDATA[<h1 id="xpath-简介与语法概要"><a href="#xpath-简介与语法概要" class="headerlink" title="xpath 简介与语法概要"></a>xpath 简介与语法概要</h1><p>xpath 是 w3c 的一种标准。简单来说就是可以让我们以路径的形式访问 html 网页中的各个元素。其中最主要的两个 为 // 与 /。前者代表 路径下的所有元素， 后者代表路径下的子元素。具体语法如下：</p>
 <p>基本语法：</p>
 <ol>
 <li>question      # 选取所有 question 元素的所有子节点  </li>
@@ -864,7 +865,7 @@ return render(req,&quot;my backend.html&quot;,locals())
 <li>//div/a | //div/p #选 取所有 div 元素的 a 元素或者 p 元素</li>
 <li>//span | //input  # 选取文档中所有的 span 和 input 元素</li>
 </ol>
-<h1 id="二-css-语法概要"><a href="#二-css-语法概要" class="headerlink" title="二. css 语法概要"></a>二. css 语法概要</h1><p>熟悉前端的同学对 css 选择器一定不会陌生，比如 jQuery 中通过各种 css 选择器语法进行 DOM 操作等。这里对其语法进行简要的总结，便于复习。</p>
+<h1 id="css-语法概要"><a href="#css-语法概要" class="headerlink" title="css 语法概要"></a>css 语法概要</h1><p>熟悉前端的同学对 css 选择器一定不会陌生，比如 jQuery 中通过各种 css 选择器语法进行 DOM 操作等。这里对其语法进行简要的总结，便于复习。</p>
 <p>基本查询语法</p>
 <pre><code> *        # 选取所有节点
 #title    # 选取 id 为 title 的元素
@@ -890,7 +891,7 @@ tr:nth-child(2n) # 第偶数个元素
     
     <summary type="html">
     
-      &lt;h1 id=&quot;一-xpath-简介与语法概要&quot;&gt;&lt;a href=&quot;#一-xpath-简介与语法概要&quot; class=&quot;headerlink&quot; title=&quot;一.    xpath 简介与语法概要&quot;&gt;&lt;/a&gt;一.    xpath 简介与语法概要&lt;/h1&gt;&lt;p&gt;xpath 是 w3
+      &lt;h1 id=&quot;xpath-简介与语法概要&quot;&gt;&lt;a href=&quot;#xpath-简介与语法概要&quot; class=&quot;headerlink&quot; title=&quot;xpath 简介与语法概要&quot;&gt;&lt;/a&gt;xpath 简介与语法概要&lt;/h1&gt;&lt;p&gt;xpath 是 w3c 的一种标准。简单来说就是可以
     
     </summary>
     
@@ -1015,9 +1016,9 @@ tr:nth-child(2n) # 第偶数个元素
     <link href="http://luoing.top/2017/08/17/Python-%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/"/>
     <id>http://luoing.top/2017/08/17/Python-技巧总结/</id>
     <published>2017-08-17T06:43:01.000Z</published>
-    <updated>2017-08-23T02:08:10.813Z</updated>
+    <updated>2017-08-30T17:23:22.653Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1-枚举-enumerate-可以有参数哦"><a href="#1-枚举-enumerate-可以有参数哦" class="headerlink" title="1.枚举 - enumerate 可以有参数哦"></a>1.枚举 - enumerate 可以有参数哦</h2><p>之前我们这样操作：</p>
+    <content type="html"><![CDATA[<h2 id="枚举-enumerate-可以有参数哦"><a href="#枚举-enumerate-可以有参数哦" class="headerlink" title="枚举 - enumerate 可以有参数哦"></a>枚举 - enumerate 可以有参数哦</h2><p>之前我们这样操作：</p>
 <pre><code>i = 0
 for item in iterable:
     print i, item
@@ -1032,25 +1033,25 @@ for item in iterable:
 
 &gt;&gt;&gt; list(enumerate(&apos;abc&apos;, 1)) 
 [(1, &apos;a&apos;), (2, &apos;b&apos;), (3, &apos;c&apos;)]
-</code></pre><h2 id="2-字典-集合-解析"><a href="#2-字典-集合-解析" class="headerlink" title="2.字典/集合 解析"></a>2.字典/集合 解析</h2><p>你也许知道如何进行列表解析，但是可能不知道字典/集合解析。它们简单易用且高效。就像下面这个例子：</p>
+</code></pre><h2 id="字典-集合-解析"><a href="#字典-集合-解析" class="headerlink" title="字典/集合 解析"></a>字典/集合 解析</h2><p>你也许知道如何进行列表解析，但是可能不知道字典/集合解析。它们简单易用且高效。就像下面这个例子：</p>
 <pre><code>my_dict = {i: i * i for i in xrange(100)} 
 my_set = {i * 15 for i in xrange(100)}
 
 # There is only a difference of &apos;:&apos; in both
 
 # 两者的区别在于字典推导中有冒号
-</code></pre><h2 id="3-强制浮点除法"><a href="#3-强制浮点除法" class="headerlink" title="3.强制浮点除法"></a>3.强制浮点除法</h2><pre><code>from __future__ import division 
+</code></pre><h2 id="强制浮点除法"><a href="#强制浮点除法" class="headerlink" title="强制浮点除法"></a>强制浮点除法</h2><pre><code>from __future__ import division 
 result = 1/2
 # print(result)
 # 0.5
-</code></pre><h2 id="4-对Python表达式求值"><a href="#4-对Python表达式求值" class="headerlink" title="4.对Python表达式求值"></a>4.对Python表达式求值</h2><p>我们都知道eval函数，但是我们知道literal_eval函数么？也许很多人都不知道吧。可以用这种操作：</p>
+</code></pre><h2 id="对Python表达式求值"><a href="#对Python表达式求值" class="headerlink" title="对Python表达式求值"></a>对Python表达式求值</h2><p>我们都知道eval函数，但是我们知道literal_eval函数么？也许很多人都不知道吧。可以用这种操作：</p>
 <pre><code>import ast 
 my_list = ast.literal_eval(expr)  
 </code></pre><p>来代替以下这种操作：</p>
 <pre><code>expr = &quot;[1, 2, 3]&quot;
 my_list = eval(expr)
 </code></pre><p>我相信对于大多数人来说这种形式是第一次看见，但是实际上这个在Python中已经存在很长时间了。</p>
-<h2 id="5-字符串-数列-逆序"><a href="#5-字符串-数列-逆序" class="headerlink" title="5.字符串/数列 逆序"></a>5.字符串/数列 逆序</h2><p>你可以用以下方法快速逆序排列数列：</p>
+<h2 id="字符串-数列-逆序"><a href="#字符串-数列-逆序" class="headerlink" title="字符串/数列 逆序"></a>字符串/数列 逆序</h2><p>你可以用以下方法快速逆序排列数列：</p>
 <pre><code>&gt;&gt;&gt; a = [1,2,3,4]
 &gt;&gt;&gt; a[::-1]
 [4, 3, 2, 1]
@@ -1063,11 +1064,11 @@ a.reverse()
 <pre><code>&gt;&gt;&gt; foo = &quot;yasoob&quot;
 &gt;&gt;&gt; foo[::-1]
 &apos;boosay&apos;
-</code></pre><h2 id="6-三元运算"><a href="#6-三元运算" class="headerlink" title="6.三元运算"></a>6.三元运算</h2><p>三元运算是if-else 语句的快捷操作，也被称为条件运算。这里有几个例子可以供你参考，它们可以让你的代码更加紧凑，更加美观。</p>
+</code></pre><h2 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h2><p>三元运算是if-else 语句的快捷操作，也被称为条件运算。这里有几个例子可以供你参考，它们可以让你的代码更加紧凑，更加美观。</p>
 <pre><code>[on_true] if [expression] else [on_false]
 x, y = 50, 25
 small = x if x &lt; y else y
-</code></pre><h2 id="7-Python里面如何拷贝一个对象"><a href="#7-Python里面如何拷贝一个对象" class="headerlink" title="7.Python里面如何拷贝一个对象"></a>7.Python里面如何拷贝一个对象</h2><p>标准库中的copy模块提供了两个方法来实现拷贝.一个方法是copy,它返回和参数包含内容一样的对象.</p>
+</code></pre><h2 id="Python里面如何拷贝一个对象"><a href="#Python里面如何拷贝一个对象" class="headerlink" title="Python里面如何拷贝一个对象"></a>Python里面如何拷贝一个对象</h2><p>标准库中的copy模块提供了两个方法来实现拷贝.一个方法是copy,它返回和参数包含内容一样的对象.</p>
 <pre><code>import copy
 new_list = copy.copy(existing_list)
 </code></pre><p>有些时候,你希望对象中的属性也被复制,可以使用deepcopy方法:</p>
@@ -1078,7 +1079,7 @@ Shallow copy operation on arbitrary Python objects.
 
 deepcopy(x, memo=None, _nil=[])
 Deep copy operation on arbitrary Python objects.
-</code></pre><h2 id="8-python中如何判断对象相等"><a href="#8-python中如何判断对象相等" class="headerlink" title="8.python中如何判断对象相等"></a>8.python中如何判断对象相等</h2><pre><code>首先是C#中字符串的==和equal方法。
+</code></pre><h2 id="python中如何判断对象相等"><a href="#python中如何判断对象相等" class="headerlink" title="python中如何判断对象相等"></a>python中如何判断对象相等</h2><pre><code>首先是C#中字符串的==和equal方法。
 “==” :
 对于内置值类型而言， == 判断两个内存值是否相等。
 对于用户自定义的值类型而言(Struct)， == 需要重载，否则不能使用。
@@ -1092,10 +1093,10 @@ python中的对象包含三要素:id, type, value
 id 用来标识唯一一个对象，type标识对象的类型，value用来设置对象的值。
 is 判断是否是一个对象，使用id来判断的。
 == 是判断a对象的值是否是b对象的值，默认调用它的__eq__方法。
-</code></pre><h2 id="9-命名技巧"><a href="#9-命名技巧" class="headerlink" title="9.命名技巧"></a>9.命名技巧</h2><p>今天阅读代码，发现一个不错的函数命名方式:</p>
+</code></pre><h2 id="命名技巧"><a href="#命名技巧" class="headerlink" title="命名技巧"></a>命名技巧</h2><p>今天阅读代码，发现一个不错的函数命名方式:</p>
 <pre><code>def request(_argv):  
 </code></pre><p>就是把所有的参数前面都加上_下划线，这样你在函数体中，一眼就可以看出那些是局部变量，那些是作为参数传入的，类似把全局变量前面加上g。</p>
-<h2 id="10-开发者工具集锦"><a href="#10-开发者工具集锦" class="headerlink" title="10.开发者工具集锦"></a>10.开发者工具集锦</h2><ul>
+<h2 id="开发者工具集锦"><a href="#开发者工具集锦" class="headerlink" title="开发者工具集锦"></a>开发者工具集锦</h2><ul>
 <li>pydoc： 模块可以根据源代码中的docstrings为任何可导入模块生成格式良好的文档。</li>
 <li>doctest模块：该模块可以从源代码或独立文件的例子中抽取出测试用例。</li>
 <li>unittest模块：该模块是一个全功能的自动化测试框架，该框架提供了对测试准备(test fixtures), 预定义测试集(predefined test suite)以及测试发现(test discovery)的支持。</li>
@@ -1112,7 +1113,7 @@ is 判断是否是一个对象，使用id来判断的。
     
     <summary type="html">
     
-      &lt;h2 id=&quot;1-枚举-enumerate-可以有参数哦&quot;&gt;&lt;a href=&quot;#1-枚举-enumerate-可以有参数哦&quot; class=&quot;headerlink&quot; title=&quot;1.枚举 - enumerate 可以有参数哦&quot;&gt;&lt;/a&gt;1.枚举 - enumerate 可以有参
+      &lt;h2 id=&quot;枚举-enumerate-可以有参数哦&quot;&gt;&lt;a href=&quot;#枚举-enumerate-可以有参数哦&quot; class=&quot;headerlink&quot; title=&quot;枚举 - enumerate 可以有参数哦&quot;&gt;&lt;/a&gt;枚举 - enumerate 可以有参数哦&lt;/h2&gt;&lt;
     
     </summary>
     

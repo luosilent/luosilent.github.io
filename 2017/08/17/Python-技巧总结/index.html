@@ -96,19 +96,19 @@
 
 
 
-<meta name="description" content="1.枚举 - enumerate 可以有参数哦之前我们这样操作： i = 0 for item in iterable:     print i, item     i += 1 现在我们这样操作： for i, item in enumerate(iterable):     print i, item enumerate函数还可以接收第二个参数。就像下面这样： &amp;gt;&amp;gt;&amp;gt;list">
+<meta name="description" content="枚举 - enumerate 可以有参数哦之前我们这样操作： i = 0 for item in iterable:     print i, item     i += 1 现在我们这样操作： for i, item in enumerate(iterable):     print i, item enumerate函数还可以接收第二个参数。就像下面这样： &amp;gt;&amp;gt;&amp;gt;list(e">
 <meta name="keywords" content="python技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 技巧总结">
 <meta property="og:url" content="http://luoing.top/2017/08/17/Python-技巧总结/index.html">
 <meta property="og:site_name" content="luosilent">
-<meta property="og:description" content="1.枚举 - enumerate 可以有参数哦之前我们这样操作： i = 0 for item in iterable:     print i, item     i += 1 现在我们这样操作： for i, item in enumerate(iterable):     print i, item enumerate函数还可以接收第二个参数。就像下面这样： &amp;gt;&amp;gt;&amp;gt;list">
+<meta property="og:description" content="枚举 - enumerate 可以有参数哦之前我们这样操作： i = 0 for item in iterable:     print i, item     i += 1 现在我们这样操作： for i, item in enumerate(iterable):     print i, item enumerate函数还可以接收第二个参数。就像下面这样： &amp;gt;&amp;gt;&amp;gt;list(e">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://litaotao.github.io/images/pycallgraph.jpg">
-<meta property="og:updated_time" content="2017-08-23T02:08:10.813Z">
+<meta property="og:updated_time" content="2017-08-30T17:23:22.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 技巧总结">
-<meta name="twitter:description" content="1.枚举 - enumerate 可以有参数哦之前我们这样操作： i = 0 for item in iterable:     print i, item     i += 1 现在我们这样操作： for i, item in enumerate(iterable):     print i, item enumerate函数还可以接收第二个参数。就像下面这样： &amp;gt;&amp;gt;&amp;gt;list">
+<meta name="twitter:description" content="枚举 - enumerate 可以有参数哦之前我们这样操作： i = 0 for item in iterable:     print i, item     i += 1 现在我们这样操作： for i, item in enumerate(iterable):     print i, item enumerate函数还可以接收第二个参数。就像下面这样： &amp;gt;&amp;gt;&amp;gt;list(e">
 <meta name="twitter:image" content="https://litaotao.github.io/images/pycallgraph.jpg">
 
 
@@ -422,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,743
+                  1,733
                 <span>字</span>
                 </span>
               
@@ -461,7 +461,7 @@
       
 
       
-        <h2 id="1-枚举-enumerate-可以有参数哦"><a href="#1-枚举-enumerate-可以有参数哦" class="headerlink" title="1.枚举 - enumerate 可以有参数哦"></a>1.枚举 - enumerate 可以有参数哦</h2><p>之前我们这样操作：</p>
+        <h2 id="枚举-enumerate-可以有参数哦"><a href="#枚举-enumerate-可以有参数哦" class="headerlink" title="枚举 - enumerate 可以有参数哦"></a>枚举 - enumerate 可以有参数哦</h2><p>之前我们这样操作：</p>
 <pre><code>i = 0
 for item in iterable:
     print i, item
@@ -476,25 +476,25 @@ for item in iterable:
 
 &gt;&gt;&gt; list(enumerate(&apos;abc&apos;, 1)) 
 [(1, &apos;a&apos;), (2, &apos;b&apos;), (3, &apos;c&apos;)]
-</code></pre><h2 id="2-字典-集合-解析"><a href="#2-字典-集合-解析" class="headerlink" title="2.字典/集合 解析"></a>2.字典/集合 解析</h2><p>你也许知道如何进行列表解析，但是可能不知道字典/集合解析。它们简单易用且高效。就像下面这个例子：</p>
+</code></pre><h2 id="字典-集合-解析"><a href="#字典-集合-解析" class="headerlink" title="字典/集合 解析"></a>字典/集合 解析</h2><p>你也许知道如何进行列表解析，但是可能不知道字典/集合解析。它们简单易用且高效。就像下面这个例子：</p>
 <pre><code>my_dict = {i: i * i for i in xrange(100)} 
 my_set = {i * 15 for i in xrange(100)}
 
 # There is only a difference of &apos;:&apos; in both
 
 # 两者的区别在于字典推导中有冒号
-</code></pre><h2 id="3-强制浮点除法"><a href="#3-强制浮点除法" class="headerlink" title="3.强制浮点除法"></a>3.强制浮点除法</h2><pre><code>from __future__ import division 
+</code></pre><h2 id="强制浮点除法"><a href="#强制浮点除法" class="headerlink" title="强制浮点除法"></a>强制浮点除法</h2><pre><code>from __future__ import division 
 result = 1/2
 # print(result)
 # 0.5
-</code></pre><h2 id="4-对Python表达式求值"><a href="#4-对Python表达式求值" class="headerlink" title="4.对Python表达式求值"></a>4.对Python表达式求值</h2><p>我们都知道eval函数，但是我们知道literal_eval函数么？也许很多人都不知道吧。可以用这种操作：</p>
+</code></pre><h2 id="对Python表达式求值"><a href="#对Python表达式求值" class="headerlink" title="对Python表达式求值"></a>对Python表达式求值</h2><p>我们都知道eval函数，但是我们知道literal_eval函数么？也许很多人都不知道吧。可以用这种操作：</p>
 <pre><code>import ast 
 my_list = ast.literal_eval(expr)  
 </code></pre><p>来代替以下这种操作：</p>
 <pre><code>expr = &quot;[1, 2, 3]&quot;
 my_list = eval(expr)
 </code></pre><p>我相信对于大多数人来说这种形式是第一次看见，但是实际上这个在Python中已经存在很长时间了。</p>
-<h2 id="5-字符串-数列-逆序"><a href="#5-字符串-数列-逆序" class="headerlink" title="5.字符串/数列 逆序"></a>5.字符串/数列 逆序</h2><p>你可以用以下方法快速逆序排列数列：</p>
+<h2 id="字符串-数列-逆序"><a href="#字符串-数列-逆序" class="headerlink" title="字符串/数列 逆序"></a>字符串/数列 逆序</h2><p>你可以用以下方法快速逆序排列数列：</p>
 <pre><code>&gt;&gt;&gt; a = [1,2,3,4]
 &gt;&gt;&gt; a[::-1]
 [4, 3, 2, 1]
@@ -507,11 +507,11 @@ a.reverse()
 <pre><code>&gt;&gt;&gt; foo = &quot;yasoob&quot;
 &gt;&gt;&gt; foo[::-1]
 &apos;boosay&apos;
-</code></pre><h2 id="6-三元运算"><a href="#6-三元运算" class="headerlink" title="6.三元运算"></a>6.三元运算</h2><p>三元运算是if-else 语句的快捷操作，也被称为条件运算。这里有几个例子可以供你参考，它们可以让你的代码更加紧凑，更加美观。</p>
+</code></pre><h2 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h2><p>三元运算是if-else 语句的快捷操作，也被称为条件运算。这里有几个例子可以供你参考，它们可以让你的代码更加紧凑，更加美观。</p>
 <pre><code>[on_true] if [expression] else [on_false]
 x, y = 50, 25
 small = x if x &lt; y else y
-</code></pre><h2 id="7-Python里面如何拷贝一个对象"><a href="#7-Python里面如何拷贝一个对象" class="headerlink" title="7.Python里面如何拷贝一个对象"></a>7.Python里面如何拷贝一个对象</h2><p>标准库中的copy模块提供了两个方法来实现拷贝.一个方法是copy,它返回和参数包含内容一样的对象.</p>
+</code></pre><h2 id="Python里面如何拷贝一个对象"><a href="#Python里面如何拷贝一个对象" class="headerlink" title="Python里面如何拷贝一个对象"></a>Python里面如何拷贝一个对象</h2><p>标准库中的copy模块提供了两个方法来实现拷贝.一个方法是copy,它返回和参数包含内容一样的对象.</p>
 <pre><code>import copy
 new_list = copy.copy(existing_list)
 </code></pre><p>有些时候,你希望对象中的属性也被复制,可以使用deepcopy方法:</p>
@@ -522,7 +522,7 @@ Shallow copy operation on arbitrary Python objects.
 
 deepcopy(x, memo=None, _nil=[])
 Deep copy operation on arbitrary Python objects.
-</code></pre><h2 id="8-python中如何判断对象相等"><a href="#8-python中如何判断对象相等" class="headerlink" title="8.python中如何判断对象相等"></a>8.python中如何判断对象相等</h2><pre><code>首先是C#中字符串的==和equal方法。
+</code></pre><h2 id="python中如何判断对象相等"><a href="#python中如何判断对象相等" class="headerlink" title="python中如何判断对象相等"></a>python中如何判断对象相等</h2><pre><code>首先是C#中字符串的==和equal方法。
 “==” :
 对于内置值类型而言， == 判断两个内存值是否相等。
 对于用户自定义的值类型而言(Struct)， == 需要重载，否则不能使用。
@@ -536,10 +536,10 @@ python中的对象包含三要素:id, type, value
 id 用来标识唯一一个对象，type标识对象的类型，value用来设置对象的值。
 is 判断是否是一个对象，使用id来判断的。
 == 是判断a对象的值是否是b对象的值，默认调用它的__eq__方法。
-</code></pre><h2 id="9-命名技巧"><a href="#9-命名技巧" class="headerlink" title="9.命名技巧"></a>9.命名技巧</h2><p>今天阅读代码，发现一个不错的函数命名方式:</p>
+</code></pre><h2 id="命名技巧"><a href="#命名技巧" class="headerlink" title="命名技巧"></a>命名技巧</h2><p>今天阅读代码，发现一个不错的函数命名方式:</p>
 <pre><code>def request(_argv):  
 </code></pre><p>就是把所有的参数前面都加上_下划线，这样你在函数体中，一眼就可以看出那些是局部变量，那些是作为参数传入的，类似把全局变量前面加上g。</p>
-<h2 id="10-开发者工具集锦"><a href="#10-开发者工具集锦" class="headerlink" title="10.开发者工具集锦"></a>10.开发者工具集锦</h2><ul>
+<h2 id="开发者工具集锦"><a href="#开发者工具集锦" class="headerlink" title="开发者工具集锦"></a>开发者工具集锦</h2><ul>
 <li>pydoc： 模块可以根据源代码中的docstrings为任何可导入模块生成格式良好的文档。</li>
 <li>doctest模块：该模块可以从源代码或独立文件的例子中抽取出测试用例。</li>
 <li>unittest模块：该模块是一个全功能的自动化测试框架，该框架提供了对测试准备(test fixtures), 预定义测试集(predefined test suite)以及测试发现(test discovery)的支持。</li>
@@ -779,7 +779,7 @@ is 判断是否是一个对象，使用id来判断的。
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-枚举-enumerate-可以有参数哦"><span class="nav-number">1.</span> <span class="nav-text">1.枚举 - enumerate 可以有参数哦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字典-集合-解析"><span class="nav-number">2.</span> <span class="nav-text">2.字典/集合 解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-强制浮点除法"><span class="nav-number">3.</span> <span class="nav-text">3.强制浮点除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-对Python表达式求值"><span class="nav-number">4.</span> <span class="nav-text">4.对Python表达式求值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-字符串-数列-逆序"><span class="nav-number">5.</span> <span class="nav-text">5.字符串/数列 逆序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-三元运算"><span class="nav-number">6.</span> <span class="nav-text">6.三元运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Python里面如何拷贝一个对象"><span class="nav-number">7.</span> <span class="nav-text">7.Python里面如何拷贝一个对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-python中如何判断对象相等"><span class="nav-number">8.</span> <span class="nav-text">8.python中如何判断对象相等</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-命名技巧"><span class="nav-number">9.</span> <span class="nav-text">9.命名技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-开发者工具集锦"><span class="nav-number">10.</span> <span class="nav-text">10.开发者工具集锦</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#枚举-enumerate-可以有参数哦"><span class="nav-number">1.</span> <span class="nav-text">枚举 - enumerate 可以有参数哦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典-集合-解析"><span class="nav-number">2.</span> <span class="nav-text">字典/集合 解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制浮点除法"><span class="nav-number">3.</span> <span class="nav-text">强制浮点除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对Python表达式求值"><span class="nav-number">4.</span> <span class="nav-text">对Python表达式求值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串-数列-逆序"><span class="nav-number">5.</span> <span class="nav-text">字符串/数列 逆序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三元运算"><span class="nav-number">6.</span> <span class="nav-text">三元运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python里面如何拷贝一个对象"><span class="nav-number">7.</span> <span class="nav-text">Python里面如何拷贝一个对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python中如何判断对象相等"><span class="nav-number">8.</span> <span class="nav-text">python中如何判断对象相等</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名技巧"><span class="nav-number">9.</span> <span class="nav-text">命名技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发者工具集锦"><span class="nav-number">10.</span> <span class="nav-text">开发者工具集锦</span></a></li></ol></div>
             
 
           </div>
@@ -826,7 +826,7 @@ is 判断是否是一个对象，使用id来判断的。
   </div>
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.8k字</span>
+  <span class="post-count">博客全站共12.7k字</span>
 </div>
 
 
