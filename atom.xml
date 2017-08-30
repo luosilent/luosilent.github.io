@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://luoing.top/"/>
-  <updated>2017-08-25T16:04:58.988Z</updated>
+  <updated>2017-08-30T16:58:10.196Z</updated>
   <id>http://luoing.top/</id>
   
   <author>
@@ -14,6 +14,150 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python面试题</title>
+    <link href="http://luoing.top/2017/08/31/python%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://luoing.top/2017/08/31/python面试题/</id>
+    <published>2017-08-30T16:36:29.000Z</published>
+    <updated>2017-08-30T16:58:10.196Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-单引号，双引号，三引号的区别"><a href="#1-单引号，双引号，三引号的区别" class="headerlink" title="1.单引号，双引号，三引号的区别"></a>1.单引号，双引号，三引号的区别</h1><p>分别阐述3种引号用的场景和区别</p>
+<p><strong>1).单引号和双引号主要用来表示字符串</strong></p>
+<p>比如:</p>
+<p>单引号:’python’</p>
+<p>双引号:”python”</p>
+<p><strong>2).三引号</strong></p>
+<p>三单引号:’’’python ‘’’,也可以表示字符串一般用来输入多行文本,或者用于大段的注释</p>
+<p>三双引号：”””python”””，一般用在类里面,用来注释类,这样省的写文档,直接用类的对象<strong>doc</strong>访问获得文档</p>
+<p>区别:</p>
+<p>若你的字符串里面本身包含单引号,必须用双引号</p>
+<p>比如:”can’t find the log\n”</p>
+<h1 id="2-Python的参数传递是值传递还是引用传递"><a href="#2-Python的参数传递是值传递还是引用传递" class="headerlink" title="2.Python的参数传递是值传递还是引用传递"></a>2.Python的参数传递是值传递还是引用传递</h1><p>举例说明Python函数参数传递的几种形式，并说明函数传参是值传递还是引用传递</p>
+<p><strong>1).Python的参数传递有：</strong></p>
+<p>位置参数</p>
+<p>默认参数，</p>
+<p>可变参数,</p>
+<p>关键字参数</p>
+<p><strong>2).函数的传值到底是值传递还是引用传递，要分情况</strong></p>
+<p>a.不可变参数用值传递：</p>
+<p>像整数和字符串这样的不可变对象，是通过拷贝进行传递的，因为你无论如何都不可能在原处改变不可变对象</p>
+<p>b.可变参数是用引用传递的</p>
+<p>比如像列表，字典这样的对象是通过引用传递，和C语言里面的用指针传递数组很相似，可变对象能在函数内部改变.</p>
+<h1 id="3-什么是lambda函数？它有什么好处"><a href="#3-什么是lambda函数？它有什么好处" class="headerlink" title="3.什么是lambda函数？它有什么好处?"></a>3.什么是lambda函数？它有什么好处?</h1><p>举例说明lambda的用法，并说明用lambda的优点</p>
+<p><strong>1).lambda的用法：</strong></p>
+<p>lambda是匿名函数，用法如下:lambda arg1,arg2..argN:expression using args</p>
+<p><strong>2).优点</strong></p>
+<p>lambda能和def做同样种类的工作，特别是对于那些逻辑简单的函数，直接用lambda会更简洁，而且省去取函数名的麻烦(给函数取名是个技术活)</p>
+<h1 id="4-字符串格式化-和-format的区别"><a href="#4-字符串格式化-和-format的区别" class="headerlink" title="4.字符串格式化:%和.format的区别"></a>4.字符串格式化:%和.format的区别</h1><p>字符串的format函数非常灵活，很强大,可以接受的参数不限个数，并且位置可以不按顺序，而且有较为强大的格式限定符(比如:填充，对齐,精度等)</p>
+<h1 id="5-Python是如何进行内存管理的"><a href="#5-Python是如何进行内存管理的" class="headerlink" title="5.Python是如何进行内存管理的"></a>5.Python是如何进行内存管理的</h1><p><strong>1).对象的引用计数机制</strong></p>
+<p>Python内部使用引用计数，来保持追踪内存中的对象，所有对象都有引用计数。</p>
+<p>引用计数增加的情况：</p>
+<p>一个对象分配一个新名称</p>
+<p>将其放入一个容器中（如列表、元组或字典）</p>
+<p>引用计数减少的情况：</p>
+<p>使用del语句对对象别名显示的销毁</p>
+<p>引用超出作用域或被重新赋值</p>
+<p><strong>2).垃圾回收</strong></p>
+<p>当一个对象的引用计数归零时，它将被垃圾收集机制处理掉。</p>
+<p><strong>3).内存池机制</strong></p>
+<p>Python提供了对内存的垃圾收集机制，但是它将不用的内存放到内存池而不是返回给操作系统:</p>
+<p>Pymalloc机制：为了加速Python的执行效率，Python引入了一个内存池机制，用于管理对小块内存的申请和释放。</p>
+<p>对于Python对象，如整数，浮点数和List，都有其独立的私有内存池，对象间不共享他们的内存池。也就是说如果你分配又释放了大量的整数，用于缓存这些整数的内存就不能再分配给浮点数。</p>
+<h1 id="6-写一个函数-输入一个字符串-返回倒序排列的结果"><a href="#6-写一个函数-输入一个字符串-返回倒序排列的结果" class="headerlink" title="6.写一个函数, 输入一个字符串, 返回倒序排列的结果"></a>6.写一个函数, 输入一个字符串, 返回倒序排列的结果</h1><p>输入: string_reverse(‘abcdef’), 返回: ‘fedcba’,写出你能想到的多种方法</p>
+<p><strong>1).利用字符串本身的翻转</strong></p>
+<pre><code>def string_reverse1(text=&apos;abcdef&apos;):
+
+return text[::-1]
+</code></pre><p><strong>2).把字符串变成列表，用列表的reverse函数</strong><br><img src="https://ask.hellobi.com/uploads/article/20170329/392521b8d9a6e8ef5d38a09fdfa06503.png" alt="1">  </p>
+<p><strong>3).新建一个列表，从后往前取</strong><br><img src="https://ask.hellobi.com/uploads/article/20170329/c5ac292759e82878ecdf11685a4b9bd5.png" alt="2">   </p>
+<p><strong>4).利用双向列表deque中的extendleft函数</strong></p>
+<p><img src="https://ask.hellobi.com/uploads/article/20170329/c3e035f6db927df1b6e933cebfaa7d58.png" alt="3">  </p>
+<p><strong>5).递归</strong></p>
+<p><img src="https://ask.hellobi.com/uploads/article/20170329/66fbf7bd362471215bc4fec641784494.png" alt="4"></p>
+<h1 id="7-按升序合并如下两个list-并去除重复的元素"><a href="#7-按升序合并如下两个list-并去除重复的元素" class="headerlink" title="7.按升序合并如下两个list, 并去除重复的元素"></a>7.按升序合并如下两个list, 并去除重复的元素</h1><pre><code>list1 = [2, 3, 8, 4, 9, 5, 6]
+
+list2 = [5, 6, 10, 17, 11, 2]
+</code></pre><p><strong>1).最简单的方法用set</strong></p>
+<pre><code>list3=list1+list2
+
+print set(list3)
+</code></pre><p><strong>2).递归</strong></p>
+<p>先选一个中间数，然后一边是小的数字，一边是大的数字，然后再循环递归，排完序(是不是想起了c里面的冒泡)</p>
+<p><img src="https://ask.hellobi.com/uploads/article/20170329/25169f478123661a5ef28145be33e90f.png" alt="5"></p>
+<h1 id="8-以下的代码的输出将是什么-说出你的答案并解释"><a href="#8-以下的代码的输出将是什么-说出你的答案并解释" class="headerlink" title="8.以下的代码的输出将是什么? 说出你的答案并解释"></a>8.以下的代码的输出将是什么? 说出你的答案并解释</h1><pre><code>class Parent(object):
+    x = 1
+class Child1(Parent):
+    pass
+class Child2(Parent):
+    pass
+print Parent.x, Child1.x, Child2.x
+Child1.x = 2
+print Parent.x, Child1.x, Child2.x
+Parent.x = 3
+print Parent.x, Child1.x, Child2.x
+&gt;&gt;
+1 1 1
+1 2 1
+3 2 3
+</code></pre><p>解答:</p>
+<p>使你困惑或是惊奇的是关于最后一行的输出是 3 2 3 而不是 3 2 1。为什么改变了 Parent.x 的值还会改变 Child2.x 的值，但是同时 Child1.x 值却没有改变？</p>
+<p>这个答案的关键是，在 Python中，类变量在内部是作为字典处理的。如果一个变量的名字没有在当前类的字典中发现，将搜索祖先类（比如父类）直到被引用的变量名被找到.</p>
+<p>首先，在父类中设置 x = 1 会使得类变量 x 在引用该类和其任何子类中的值为 1。这就是因为第一个 print 语句的输出是 1 1 1</p>
+<p>然后，如果任何它的子类重写了该值（例如，我们执行语句 Child1.x = 2）该值仅仅在子类中被改变。这就是为什么第二个 print 语句的输出是 1 2 1</p>
+<p>最后，如果该值在父类中被改变（例如，我们执行语句 Parent.x = 3），这个改变会影响到任何未重写该值的子类当中的值（在这个示例中被影响的子类是 Child2）。这就是为什么第三个 print 输出是 3 2 3</p>
+<h1 id="9-下面的代码会不会报错"><a href="#9-下面的代码会不会报错" class="headerlink" title="9.下面的代码会不会报错"></a>9.下面的代码会不会报错</h1><pre><code>list = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]
+print list[10:]
+</code></pre><p>不会报错，而且会输出一个 []，并且不会导致一个 IndexError</p>
+<p>解答:</p>
+<p>当试图访问一个超过列表索引值的成员将导致 IndexError（比如访问以上列表的 list[10]）。尽管如此，试图访问一个列表的以超出列表长度数作为开始索引的切片将不会导致 IndexError，并且将仅仅返回一个空列表</p>
+<p>一个讨厌的小问题是它会导致出现 bug ，并且这个问题是难以追踪的，因为它在运行时不会引发错误，吐血啊~~</p>
+<h1 id="10-说出下面list1-list2-list3的输出值"><a href="#10-说出下面list1-list2-list3的输出值" class="headerlink" title="10.说出下面list1,list2,list3的输出值"></a>10.说出下面list1,list2,list3的输出值</h1><pre><code>def extendList(val, list=[]):
+    list.append(val)
+    return list
+list1 = extendList(10)
+list2 = extendList(123,[])
+list3 = extendList(&apos;a&apos;)
+print &quot;list1 = %s&quot; % list1
+print &quot;list2 = %s&quot; % list2
+print &quot;list3 = %s&quot; % list3
+&gt;&gt;
+list1 = [10, &apos;a&apos;]
+list2 = [123]
+list3 = [10, &apos;a&apos;]
+</code></pre><p>许多人会错误的认为 list1 应该等于 [10] 以及 list3 应该等于 [‘a’]。认为 list 的参数会在 extendList 每次被调用的时候会被设置成它的默认值 []。</p>
+<p>尽管如此，实际发生的事情是，新的默认列表仅仅只在函数被定义时创建一次。随后当 extendList 没有被指定的列表参数调用的时候，其使用的是同一个列表。这就是为什么当函数被定义的时候，表达式是用默认参数被计算，而不是它被调用的时候。</p>
+<p>因此，list1 和 list3 是操作的相同的列表。而list2是操作的它创建的独立的列表（通过传递它自己的空列表作为list参数的值）</p>
+<p>所以这一点一定要切记切记.下面我们把list置为None就可以避免一些麻烦了</p>
+<p><img src="https://ask.hellobi.com/uploads/article/20170329/458a01787506997ce42a8e054d2cee11.png" alt="6"></p>
+<h1 id="11-写出你认为最Pythonic的代码"><a href="#11-写出你认为最Pythonic的代码" class="headerlink" title="11.写出你认为最Pythonic的代码"></a>11.写出你认为最Pythonic的代码</h1><p>Pythonic编程风格是Python的一种追求的风格，精髓就是追求直观，简洁而容易读.</p>
+<p>下面是一些比较好的例子</p>
+<p><strong>1).交互变量</strong></p>
+<p>非Pythonic<br>    temp = a<br>    a = b<br>    b = temp<br>    pythonic:<br>    a,b=b,a<br><strong>2).判断其值真假</strong></p>
+<pre><code>name = &apos;Tim&apos;
+langs = [&apos;AS3&apos;, &apos;Lua&apos;, &apos;C&apos;]
+info = {&apos;name&apos;: &apos;Tim&apos;, &apos;sex&apos;: &apos;Male&apos;, &apos;age&apos;:23 }  
+</code></pre><p>非Pythonic<br>    if name != ‘’ and len(langs) &gt; 0 and info != {}:<br>        print(‘All True!’)<br>pythonic:<br>    if name and langs and info:<br>        print(‘All True!’)<br><strong>3).列表推导式</strong></p>
+<pre><code>[x for x in range(1,100) if x%2==0]
+</code></pre><p><strong>4).zip创建键值对</strong></p>
+<pre><code>keys = [&apos;Name&apos;, &apos;Sex&apos;, &apos;Age&apos;]
+values = [&apos;Jack&apos;, &apos;Male&apos;, 23]
+dict(zip(keys,values))
+</code></pre><p>转载自<a href="https://ask.hellobi.com/blog/caoniao_xueyuan/7021" target="_blank" rel="external">https://ask.hellobi.com/blog/caoniao_xueyuan/7021</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-单引号，双引号，三引号的区别&quot;&gt;&lt;a href=&quot;#1-单引号，双引号，三引号的区别&quot; class=&quot;headerlink&quot; title=&quot;1.单引号，双引号，三引号的区别&quot;&gt;&lt;/a&gt;1.单引号，双引号，三引号的区别&lt;/h1&gt;&lt;p&gt;分别阐述3种引号用的场景和区
+    
+    </summary>
+    
+      <category term="python" scheme="http://luoing.top/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://luoing.top/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>每天读点文学5</title>
